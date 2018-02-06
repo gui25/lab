@@ -62,28 +62,6 @@
       function quebraLampada() {
         document.getElementById("luzz").src = "lampada-quebrada.jpg";
       }
-      <?php
-      function contador()
-      {
-        $archivo = "contador.txt"; //el archivo que contiene en numero
-        $f = fopen($archivo, "r"); //abrimos el archivo en modo de lectura
-        if($f)
-        {
-            $contador = fread($f, filesize($archivo)); //leemos el archivo
-            $contador = $contador + 1; //sumamos +1 al contador
-            fclose($f);
-        }
-        $f = fopen($archivo, "w+");
-        if($f)
-        {
-            fwrite($f, $contador);
-            fclose($f);
-        }
-        return $contador;
-       }
-       $visitante = contador();
-       echo "O numero de visitas do site é de" . $visitante;
-       ?>
     </script>
    <body>
        <div id = "menu">
@@ -95,7 +73,6 @@
        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guilherme&nbsp;SITE</h1>
        <h2>Acenda a lampada</h2>
        <img src="lampada-apagada.jpg" id="luzz" onmousemove = "acendeLampada()" onmouseout = "apagaLampada()" onclick = "quebraLampada()"
-       function contador()
       }/>
       </form>
    </body>
