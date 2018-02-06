@@ -62,10 +62,9 @@
       function quebraLampada() {
         document.getElementById("luzz").src = "lampada-quebrada.jpg";
       }
-    </script>
-    <?php
-    function contador()
-    {
+      <?php
+      function contador()
+      {
         $archivo = "contador.txt"; //el archivo que contiene en numero
         $f = fopen($archivo, "r"); //abrimos el archivo en modo de lectura
         if($f)
@@ -81,10 +80,11 @@
             fclose($f);
         }
         return $contador;
-    }
-    $visitante = contador();
-    echo "O numero de visitas do site é de" . $visitante;
-    ?>
+       }
+       $visitante = contador();
+       echo "O numero de visitas do site é de" . $visitante;
+       ?>
+    </script>
    <body>
        <div id = "menu">
                 <ul>
