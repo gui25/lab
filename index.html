@@ -77,14 +77,14 @@
        <button onclick="playMus()" type="button">Tocar musica</button>
        <button onclick="pauseMus()" type="button">Pausar musica</button><br>
        <audio id="myMusic">
-       <source src="Nyan.mp3" hidden="true" autostart="false" loop="true" type="audio/mpeg">
+       <ember ="Nyan.mp3" hidden="true" loop="true" type="audio/mpeg">
        </audio>
        <script> 
        var music = document.getElementById("myMusic"); <!-- Tomara que funcione -->
-       function playMusic() { 
+       function playAudio() { 
        music.play(); 
        } 
-       function pauseMusic() { 
+       function pauseAudio() {
        music.pause(); 
        } 
        </script> 
