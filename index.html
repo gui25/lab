@@ -74,20 +74,25 @@
       }/>
       </form>
        
-       <button onclick="playAudio()" type="button">Tocar musica</button>
-       <button onclick="pauseAudio()" type="button">Pausar musica</button><br>
-       <audio id="myMusic">
-       <src="Nyan.mp3" type="audio/mpeg" hidden="true" loop="true">
-       </audio>
-       <script> 
-       music = document.getElementById("myMusic"); <!-- Tomara que funcione -->
-       function playAudio() { 
-       music.play(); 
-       } 
-       function pauseAudio() {
-       music.pause(); 
-       } 
-       </script> 
+<script LANGUAGE="JAVASCRIPT">
+
+n = (document.layers) ? 1:0
+ie = (document.all) ? 1:0
+function play_sound() {
+if (n) document.thesound.play(false)
+if (ie) {
+document.thesound.stop()
+document.thesound.play()
+}
+}
+function stop_sound() {
+document.thesound.stop()
+}
+</SCRIPT>
+
+A HREF="javascript:play_sound(); ">play</a> <A HREF="javascript:document.thesound.stop()">stop</a><EMBED SRC="Nyan.mp3" HIDDEN=TRUE VOLUME=0 AUTOSTART="false" MASTERSOUND NAME="thesound" width="128" height="128">
+<p>
+
    </body>
 
 </html>
