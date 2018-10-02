@@ -73,25 +73,25 @@
        <img src="lampada-apagada.jpg" id="luzz" onmousemove = "acendeLampada()" onmouseout = "apagaLampada()" onclick = "quebraLampada()"
       }/>
       </form>
+        
+<button onclick="playMus()" type="button">Play</button>
+<button onclick="pauseMus()" type="button">Pause</button><br> 
+
+<music id="myMusica">
+  <source src="Nyan.mp3" type="audio/mpeg" HIDDEN=TRUE AUTOSTART="false">
+</music>
        
-<script LANGUAGE="JAVASCRIPT">
+<script> 
+var mus = document.getElementById("myMusica"); 
 
-n = (document.layers) ? 1:0
-ie = (document.all) ? 1:0
-function play_sound() {
-if (n) document.thesound.play(false)
-if (ie) {
-document.thesound.stop()
-document.thesound.play()
-}
-}
-function stop_sound() {
-document.thesound.stop()
-}
-</SCRIPT>
+function playMus() { 
+    vid.play(); 
+} 
 
-<A HREF="javascript:play_sound(); ">play</a> <A HREF="javascript:document.thesound.stop()">stop</a><EMBED SRC="Nyan.mp3" HIDDEN=TRUE VOLUME="10" AUTOSTART="false" MASTERSOUND NAME="thesound" width="128" height="128">
-<p>
+function pauseMus() { 
+    mus.pause(); 
+} 
+</script>
 
    </body>
 
