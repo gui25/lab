@@ -7,7 +7,7 @@
         <title> Guilherme-site </title>
         <link rel="stylesheet" href="style.css">
             <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-                alert("Oie !")
+                alert("Welcome to my site.")
             </SCRIPT>
         <style>
             
@@ -51,47 +51,17 @@
             }
         </style>
     </head>
-    <script >
-      function acendeLampada() {
-        document.getElementById("luzz").src = "lampada-acesa.jpg";
-      }
-      function apagaLampada() {
-        document.getElementById("luzz").src = "lampada-apagada.jpg";
-      }
-      function quebraLampada() {
-        document.getElementById("luzz").src = "lampada-quebrada.jpg";
-      }
-    </script>
    <body>
        <div id = "menu">
-                <ul>
-                    <li><a href = "https://cmeimg-a.akamaihd.net/640/ppds/36b52202-171f-4d92-add7-9fe0f3ba2d08.gif">Abra!</a></li>
-                </ul>
+        <header>
+		<a href="#" class="btn-1">Botão 1</a>
+		<a href="#" class="btn-2">Botão 2</a>
+		<a href="#" class="btn-3">Botão 3</a>
+	    </header>
        </div>
-       <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guilherme&nbsp;SITE</h1>
-       <h2>Acenda a lampada</h2>
-       <img src="lampada-apagada.jpg" id="luzz" onmousemove = "acendeLampada()" onmouseout = "apagaLampada()" onclick = "quebraLampada()"
-      }/>
+       <center><h1>Guilherme&nbsp;SITE</h1></center>
       </form>
         
-<button onclick="playMus()" type="button">Play</button>
-<button onclick="pauseMus()" type="button">Pause</button><br> 
-
-<music id="myMusica">
-  <source src="Nyan.mp3" type="audio/mpeg" HIDDEN=TRUE AUTOSTART="false">
-</music>
-       
-<script> 
-var mus = document.getElementById("myMusica"); 
-
-function playMus() { 
-    mus.play(); 
-} 
-
-function pauseMus() { 
-    mus.pause(); 
-} 
-</script>
 
    </body>
 
