@@ -19,3 +19,7 @@ header a{
   padding: 10px 15px;
   margin:150px 30px;
 }
+header a:hover {
+  background-color: #fff;
+  color:#fff;
+}
