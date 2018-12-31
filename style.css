@@ -18,6 +18,8 @@ header a{
   display:inline-block;
   padding: 10px 15px;
   margin:150px 30px;
+  border:1px solid #fff;
+  border-radius:5px;
 }
 header a:hover {
   background-color: #fff;
