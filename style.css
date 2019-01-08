@@ -57,3 +57,23 @@ header a:hover {
    animaction-time-function: linear;
    animaction-iteration-count: 1;
 }
+@keyframes btn3 {
+  o% {
+   transform:rotateX(0);
+  }
+  50%{
+   transform:rotate(180deg);
+  }
+  100%{
+   transform:rotate(0);
+  }
+.btn-3{
+   transition: .5s;
+}
+.btn-3:hover {
+   animation-name:btn3;
+   animation-delay: .5s;
+   animation-duration: .5s;
+   animaction-time-function: linear;
+   animaction-iteration-count: 1;
+}
