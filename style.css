@@ -62,7 +62,7 @@ header a:hover {
    transform:rotateX(0);
   }
   50%{
-   transform:rotateX(180deg);
+   transform:rotateX(360deg);
   }
   100%{
    transform:rotateX(0);
@@ -73,7 +73,7 @@ header a:hover {
 .btn-3:hover {
    animation-name:btn3;
    animation-delay: .5s;
-   animation-duration: .5s;
+   animation-duration: 1s;
    animaction-time-function: linear;
    animaction-iteration-count: 1;
 }
