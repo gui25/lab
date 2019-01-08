@@ -31,7 +31,7 @@ header a:hover {
   transition: .5s;
 }
 @keyframes btn2 {
-  o% {
+  0% {
    transform:rotate(0);
   }
   25%{
@@ -58,7 +58,7 @@ header a:hover {
    animaction-iteration-count: 1;
 }
 @keyframes btn3 {
-  o% {
+  0% {
    transform:rotateX(0);
   }
   50%{
