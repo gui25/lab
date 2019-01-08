@@ -3,6 +3,12 @@
    padding:0;
    font-family: 'lato',sans-serif;
 }
+h1 {
+  font-family: 'lato',sans-serif;
+  position: relative;
+  left: 100px;
+  top: 150px;
+}
 header {
    position:fixed;
    width: 100%;
