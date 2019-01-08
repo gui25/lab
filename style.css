@@ -62,10 +62,10 @@ header a:hover {
    transform:rotateX(0);
   }
   50%{
-   transform:rotate(180deg);
+   transform:rotateX(180deg);
   }
   100%{
-   transform:rotate(0);
+   transform:rotateX(0);
   }
 .btn-3{
    transition: .5s;
