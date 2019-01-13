@@ -46,10 +46,23 @@
         </header>
 
         <center><h1>This is my site</h1></center>
-	<audio id="music" controls="">
+	<audio id="Music">
             	<source src="nyanCat.mp3" type="audio/mpeg">
 	</audio>
-        </form>
+	<button onclick="playMusic()" type="button">Play Music</button>
+        <button onclick="pauseMusic()" type="button">Pause Music</button> 
+
+	<script>
+	var x = document.getElementById("Music"); 
+
+	function playMusic() { 
+        x.play(); 
+	} 
+
+	function pauseMusic() { 
+        x.pause(); 
+	} 
+	</script>
         
     </body>
 
