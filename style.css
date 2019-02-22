@@ -87,9 +87,11 @@ header a:hover {
    animaction-iteration-count: 1;
 }
 .btn-4 {
-  display: inline-block;
+  position: absolute;
+  bottom: 8px;
+  left: 200px;
+  font-size: 18px;
   padding: 5px 10px;
-  font-size: 24px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -104,6 +106,30 @@ header a:hover {
 .btn-4:hover {background-color: #1968fb}
 
 .btn-4:active {
+  background-color: #3557d2;
+  box-shadow: 0 3px #4a535f;
+  transform: translateY(4px);
+
+.btn-5 {
+  position: absolute;
+  bottom: 8px;
+  left: 180px;
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #2d60ef;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #5f8eca;
+}
+
+.btn-5:hover {background-color: #1968fb}
+
+.btn-5:active {
   background-color: #3557d2;
   box-shadow: 0 3px #4a535f;
   transform: translateY(4px);
