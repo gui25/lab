@@ -88,22 +88,22 @@ header a:hover {
 }
 .btn-4 {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 5px 10px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #2d60ef;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 3px #5f8eca;
 }
 
-.btn-4:hover {background-color: #3e8e41}
+.btn-4:hover {background-color: #1968fb}
 
 .btn-4:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  background-color: #3557d2;
+  box-shadow: 0 3px #4a535f;
   transform: translateY(4px);
