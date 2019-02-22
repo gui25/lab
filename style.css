@@ -135,3 +135,9 @@ header a:hover {
   box-shadow: 0 1,5px #4a535f;
   transform: translateY(4px);
 }
+
+.sorvete {
+  position: absolute;
+  left: 550px;
+  top: 200px;
+}
