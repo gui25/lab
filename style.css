@@ -138,14 +138,15 @@ header a:hover {
 
 .sorvete {
   position: absolute;
-  left: 550px;
+  left: 561px;
   top: 200px;
   opacity:0;
 }
 
 .sorvete:hover {
-  position: absolute;
-  left: 550px;
+  position: center;
+  vertical-align: middle;
+  left: 561px;
   top: 200px;
   opacity:1;
 }
