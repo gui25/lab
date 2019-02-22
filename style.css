@@ -107,7 +107,7 @@ header a:hover {
 
 .button1:active {
   background-color: #3557d2;
-  box-shadow: 0 3px #4a535f;
+  box-shadow: 0 1,5px #4a535f;
   transform: translateY(4px);
 }
 
@@ -132,6 +132,6 @@ header a:hover {
 
 .button2:active {
   background-color: #3557d2;
-  box-shadow: 0 3px #4a535f;
+  box-shadow: 0 1,5px #4a535f;
   transform: translateY(4px);
 }
