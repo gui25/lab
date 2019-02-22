@@ -89,7 +89,7 @@ header a:hover {
 .button1 {
   position: absolute;
   bottom: 8px;
-  left: 200px;
+  left: 30px;
   font-size: 18px;
   padding: 5px 10px;
   cursor: pointer;
@@ -109,11 +109,12 @@ header a:hover {
   background-color: #3557d2;
   box-shadow: 0 3px #4a535f;
   transform: translateY(4px);
+}
 
 .button2 {
   position: absolute;
   bottom: 8px;
-  left: 180px;
+  left: 140px;
   font-size: 18px;
   padding: 5px 10px;
   cursor: pointer;
@@ -133,3 +134,4 @@ header a:hover {
   background-color: #3557d2;
   box-shadow: 0 3px #4a535f;
   transform: translateY(4px);
+}
