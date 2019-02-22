@@ -140,4 +140,12 @@ header a:hover {
   position: absolute;
   left: 550px;
   top: 200px;
+  opacity:0;
+}
+
+.sorvete:hover {
+  position: absolute;
+  left: 550px;
+  top: 200px;
+  opacity:1;
 }
