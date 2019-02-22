@@ -86,7 +86,7 @@ header a:hover {
    animaction-time-function: linear;
    animaction-iteration-count: 1;
 }
-.btn-4 {
+.button1 {
   position: absolute;
   bottom: 8px;
   left: 200px;
@@ -103,14 +103,14 @@ header a:hover {
   box-shadow: 0 3px #5f8eca;
 }
 
-.btn-4:hover {background-color: #1968fb}
+.button1:hover {background-color: #1968fb}
 
-.btn-4:active {
+.button1:active {
   background-color: #3557d2;
   box-shadow: 0 3px #4a535f;
   transform: translateY(4px);
 
-.btn-5 {
+.button2 {
   position: absolute;
   bottom: 8px;
   left: 180px;
@@ -127,9 +127,9 @@ header a:hover {
   box-shadow: 0 3px #5f8eca;
 }
 
-.btn-5:hover {background-color: #1968fb}
+.button2:hover {background-color: #1968fb}
 
-.btn-5:active {
+.button2:active {
   background-color: #3557d2;
   box-shadow: 0 3px #4a535f;
   transform: translateY(4px);
