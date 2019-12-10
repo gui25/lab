@@ -4,15 +4,26 @@
         <link rel="shortcut icon" type="image/png" href="favicon.png"> 
         <meta charset=UTF-8/>
         <title> Guilherme-site </title>
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" style type="text/css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" style type="text/css">
+        
         <link rel="stylesheet" href="style.css">
-            <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-                alert("Welcome to my site.")
-            </SCRIPT>
+
+
 	<style>
-	body {
-		background-color:#54a0ff;
-	}
+        body {
+            background-color:#54a0ff;
+        }
+        #toast-container {
+            top: 1%;
+            right: 1%;
+            transform: translateX(1%) translateY(1%);  
+        }
         h1 {
         	font-family: Lato;
         	font-size: 30pt;
@@ -36,8 +47,11 @@
         </header>
 
         <center><h1>This is my site</h1></center>
-	<img src="original.gif" id="sorvete" style="width:250px;height:250px;" class="sorvete">
-	<audio id="Music">
+        <script>
+        Materialize.toast('Seja bem vindo ao meu site!', 8000);
+        </script>
+	    <img src="original.gif" id="sorvete" style="width:250px;height:250px;" class="sorvete">
+	    <audio id="Music">
             	<source src="nyanCat.mp3" type="audio/mpeg">
 	</audio>
 	<button class="button1" onclick="playMusic()" type="button">Play Music</button>
@@ -45,11 +59,9 @@
 
 	<script>
 	var x = document.getElementById("Music"); 
-
 	function playMusic() { 
         x.play(); 
 	} 
-
 	function pauseMusic() { 
         x.pause(); 
 	} 
