@@ -48,14 +48,24 @@
 
         <center><h1>This is my site</h1></center>
         <script>
-        Materialize.toast('Seja bem vindo ao meu site!', 8000);
+        var nome = window.prompt('What is your name?')
+        Materialize.toast('Welcome to my site ' + nome + ' !', 8000);
+        function calculator(){
+        var n1 = window.prompt('Write the first number')
+        n1 = parseInt(n1)
+        var n2 = window.prompt('Write the second number')
+        n2 = parseInt(n2)
+        window.alert(n1 + n2)
+        } 
         </script>
 	    <img src="original.gif" id="sorvete" style="width:250px;height:250px;" class="sorvete">
 	    <audio id="Music">
             	<source src="nyanCat.mp3" type="audio/mpeg">
 	</audio>
 	<button class="button1" onclick="playMusic()" type="button">Play Music</button>
-        <button class="button2" onclick="pauseMusic()" type="button">Pause Music</button> 
+    <button class="button2" onclick="pauseMusic()" type="button">Pause Music</button>
+    <button class="button3" onclick="calculator()" type="button" style="position: absolute;
+    bottom: 8px;left: 90%;font-size: 18px;padding: 5px 10px;cursor: pointer;text-align: center;text-decoration: none;outline: none;color: #fff;background-color: #2d60ef;border: none;border-radius: 15px;box-shadow: 0 3px #5f8eca;">Calculator</button> 
 
 	<script>
 	var x = document.getElementById("Music"); 
@@ -64,7 +74,9 @@
 	} 
 	function pauseMusic() { 
         x.pause(); 
-	} 
+    }
+    
+    
 	</script>
     </body>
 
