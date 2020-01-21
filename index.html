@@ -138,8 +138,27 @@
                 for (var i = 0; i < trail.length; i++) {
                     lastp = trail.length;
                     if(i!=trail.length){
+                    if(i>=0 && i<=10){
                     ctx.fillStyle = "green";
                     ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if(i>=11 && i<=20){
+                    ctx.fillStyle = "purple";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if(i>=21 && i<=30){
+                    ctx.fillStyle = "blue";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if(i>=31 && i<=40){
+                    ctx.fillStyle = "orange";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    } 
+                    if(i>=41){
+                    ctx.fillStyle = "white";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);   
+                    }
+
                     }
                     if(i==trail.length-1){
                     ctx.fillStyle = "yellow";
