@@ -4,80 +4,114 @@
         <link rel="shortcut icon" type="image/png" href="favicon.png"> 
         <meta charset=UTF-8/>
         <title> Guilherme-site </title>
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" style type="text/css">
-        
-        <link rel="stylesheet" href="style.css">
-
-
-	<style>
-        body {
-            background-color:#54a0ff;
+</head>
+<body>
+ 
+    <canvas id="stage" width="600" height="600"></canvas>
+    <script type="text/javascript">
+       
+        window.onload = function(){
+ 
+            var stage = document.getElementById('stage');
+            var ctx = stage.getContext("2d");
+            document.addEventListener("keydown", keyPush);
+            setInterval(game, 80);
+ 
+            const vel = 1;
+ 
+            var vx = vy = 0;
+            var px =10;
+            var py = 15;
+            var tp = 30;
+            var qp = 20;
+            var ax=ay=15;
+ 
+            var trail = [];
+            tail = 5;
+ 
+            function game(){
+                px += vx;
+                py += vy;
+                if (px <0) {
+                    px = qp-1;
+                }
+                if (px > qp-1) {
+                    px = 0;
+                }
+                if (py < 0) {
+                    py = qp-1;
+                }
+                if (py > qp-1) {
+                    py = 0;
+                }
+ 
+                ctx.fillStyle = "black";
+                ctx.fillRect(0,0, stage.width, stage.height);
+ 
+                ctx.fillStyle = "red";
+                ctx.fillRect(ax*tp, ay*tp, tp,tp);
+ 
+                
+                for (var i = 0; i < trail.length; i++) {
+                    if(i!=trail.length){
+                    ctx.fillStyle = "green";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if(i==trail.length-1){
+                    ctx.fillStyle = "yellow";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if (trail[i].x == px && trail[i].y == py)
+                    {
+                        vx = vy=0; //velocidade zera
+                        tail =5; //rabo vira 5 pos
+                    }
+                }
+                
+                trail.push({x:px,y:py })
+                while (trail.length > tail) {
+                    trail.shift();
+                }
+ 
+                if (ax==px && ay==py){
+                    var coin = new Audio('coin.mp3');
+                    coin.play();
+                    tail++;
+                    ax = Math.floor(Math.random()*qp);
+                    ay = Math.floor(Math.random()*qp);
+                }
+ 
+            }
+ 
+            function keyPush(event){
+ 
+                switch (event.keyCode) {
+                    case 37: // Left
+                        vx = -vel;
+                        vy = 0;
+                        break;
+                    case 38: // up
+                        vx = 0;
+                        vy = -vel;
+                        break;
+                    case 39: // right
+                        vx = vel;
+                        vy = 0;
+                        break;
+                    case 40: // down
+                        vx = 0;
+                        vy = vel;
+                        break;         
+                    default:
+                       
+                        break;
+                }
+ 
+ 
+            }
+ 
         }
-        #toast-container {
-            top: 1%;
-            right: 1%;
-            transform: translateX(1%) translateY(1%);  
-        }
-        h1 {
-        	font-family: Lato;
-        	font-size: 30pt;
-        	color: #00cec9;
-        	text-shadow: black 2px 2px 2px;
-        }
-        h2{
-                padding-left: 10px;
-                font-family: Arial;
-                font-size: 30pt;
-                color: #f2000d;
-                text-shadow: black 2px 2px 2px;
-        }
-        </style>
-    </head>
-    <body>
-        <header>
-		<a href="#" class="btn-1">Botão 1</a>
-		<a href="#" class="btn-2">Botão 2</a>
-		<a href="https://github.com/gui25" class="btn-3">Botão 3</a>
-        </header>
-
-        <center><h1>This is my site</h1></center>
-        <script>
-        var nome = window.prompt('What is your name?')
-        Materialize.toast('Welcome to my site ' + nome + ' !', 8000);
-        function calculator(){
-        var n1 = window.prompt('Write the first number')
-        n1 = parseInt(n1)
-        var n2 = window.prompt('Write the second number')
-        n2 = parseInt(n2)
-        window.alert(n1 + n2)
-        } 
-        </script>
-	    <img src="original.gif" id="sorvete" style="width:250px;height:250px;" class="sorvete">
-	    <audio id="Music">
-            	<source src="nyanCat.mp3" type="audio/mpeg">
-	</audio>
-	<button class="button1" onclick="playMusic()" type="button">Play Music</button>
-    <button class="button2" onclick="pauseMusic()" type="button">Pause Music</button>
-    <button class="button3" onclick="calculator()" type="button" style="position: absolute;
-    bottom: 8px;left: 90%;font-size: 18px;padding: 5px 10px;cursor: pointer;text-align: center;text-decoration: none;outline: none;color: #fff;background-color: #2d60ef;border: none;border-radius: 15px;box-shadow: 0 3px #5f8eca;">Calculator</button> 
-
-	<script>
-	var x = document.getElementById("Music"); 
-	function playMusic() { 
-        x.play(); 
-	} 
-	function pauseMusic() { 
-        x.pause(); 
-    }
-    
-    
-	</script>
-    </body>
-
+ 
+    </script>
+</body>
 </html>
