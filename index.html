@@ -41,7 +41,7 @@
             function myFunction() {
             flag=1;
             }
-
+            flag2=0;
             vel = 1;
             vx = vy = 0;
             px =10;
@@ -116,6 +116,7 @@
                         vx = vy=0; //velocidade zera
                         tail =5; //corpo vira 5 pos
                         if(score!=0){
+                        flag2=1;
                         gameovers(n1);
                         }
                     }
@@ -155,6 +156,7 @@
                 }
                 n1++;
             }
+            
 
  
         }
