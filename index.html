@@ -1,36 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <link rel="shortcut icon" type="image/png" href="favicon.png"> 
-        <meta charset=UTF-8/>
-        <title> Guilherme-site </title>
+<html>
+<head>
+    <title>Jogo da cobrinha</title>
+    <style>
+        body{
+            background-color:#312e2e;
+        }
+        #botao{
+            position: absolute;
+            bottom: 8px;
+            left: 90%;
+            font-size: 18px;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;color: #fff;
+            background-color: #696969;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 3px #000000;
+
+        }
+    
+    </style>
 </head>
 <body>
- 
+    <a type="button" class="button" id="botao" onclick="gamestart()">Start</a>
     <canvas id="stage" width="600" height="600"></canvas>
     <script type="text/javascript">
        
         window.onload = function(){
- 
             var stage = document.getElementById('stage');
             var ctx = stage.getContext("2d");
             document.addEventListener("keydown", keyPush);
             setInterval(game, 80);
- 
-            const vel = 1;
- 
-            var vx = vy = 0;
-            var px =10;
-            var py = 15;
-            var tp = 30;
-            var qp = 20;
-            var ax=ay=15;
- 
-            var trail = [];
+            flag=0;
+
+            document.getElementById("botao").addEventListener("click", myFunction);
+            function myFunction() {
+            flag=1;
+            }
+
+            vel = 1;
+            vx = vy = 0;
+            px =10;
+            py = 15;
+            tp = 30;
+            qp = 20;
+            ax=ay=15;
+            trail = [];
+            n1 = 0;
             tail = 5;
- 
+            lost=0;
+            score=0;
+
+            gameover = new Audio('gameover.mp3');
+            
+            
+
             function game(){
-                px += vx;
+                
+                if(flag==1){
+                    px += vx;
                 py += vy;
                 if (px <0) {
                     px = qp-1;
@@ -50,9 +82,27 @@
  
                 ctx.fillStyle = "red";
                 ctx.fillRect(ax*tp, ay*tp, tp,tp);
+                start();
+                }
+                trail.push({x:px,y:py })
+                while (trail.length > tail) {
+                    trail.shift();
+                }
  
+                if (ax==px && ay==py){
+                    var coinad = new Audio('coin.mp3');
+                    coinad.play();
+                    score++;
+                    tail++;
+                    ax = Math.floor(Math.random()*qp);
+                    ay = Math.floor(Math.random()*qp);
+                }
+ 
+            }
+            function start(){
                 
                 for (var i = 0; i < trail.length; i++) {
+                    lastp = trail.length;
                     if(i!=trail.length){
                     ctx.fillStyle = "green";
                     ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
@@ -64,25 +114,13 @@
                     if (trail[i].x == px && trail[i].y == py)
                     {
                         vx = vy=0; //velocidade zera
-                        tail =5; //rabo vira 5 pos
+                        tail =5; //corpo vira 5 pos
+                        if(score!=0){
+                        gameovers(n1);
+                        }
                     }
                 }
-                
-                trail.push({x:px,y:py })
-                while (trail.length > tail) {
-                    trail.shift();
                 }
- 
-                if (ax==px && ay==py){
-                    var coin = new Audio('coin.mp3');
-                    coin.play();
-                    tail++;
-                    ax = Math.floor(Math.random()*qp);
-                    ay = Math.floor(Math.random()*qp);
-                }
- 
-            }
- 
             function keyPush(event){
  
                 switch (event.keyCode) {
@@ -109,6 +147,15 @@
  
  
             }
+            function gameovers(){
+                if(n1>0){
+                gameover.play();
+                } else {
+                    gameover.pause();
+                }
+                n1++;
+            }
+
  
         }
  
