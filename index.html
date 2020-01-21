@@ -126,6 +126,7 @@
                     }
                     if (trail[i].x == px && trail[i].y == py)
                     {
+                        
                         vx = vy=0; //velocidade zera
                         tail =5; //corpo vira 5 pos
                         if(score!=0){
@@ -164,6 +165,8 @@
             function gameovers(){
                 if(n1>0){
                 gameover.play();
+                score= score-score;
+                document.getElementById("scoree").innerHTML = "Score:" + score;
                 } else {
                     gameover.pause();
                 }
