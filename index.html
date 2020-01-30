@@ -53,13 +53,25 @@
             background-color:  #000000;
 
         }
+        #recorde{
+            position: absolute;
+            height: 40px;
+            left: 5%;
+            font-size: 30px;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color:  #000000;
+
+        }
     
     </style>
 </head>
 <body>
     <a type="button" class="button" id="botao" >Start</a>
     <p id="scoree"></p>
-    <canvas id="stage" width="600" height="600"></canvas>
+    <p id="recorde"></p>
+    <center><canvas id="stage" width="600" height="600"></canvas></center>
     <script type="text/javascript">
        
         window.onload = function(){
@@ -223,9 +235,13 @@
             }
             function gameovers(){
                 if(n1>0){
+                if(score>localStorage.recorde){
+                localStorage.recorde = Number(score);
+                }
                 gameover.play();
                 score= score-score;
                 document.getElementById("scoree").innerHTML = "Score:" + score;
+                document.getElementById("recorde").innerHTML = "Recorde Atual: " + localStorage.recorde;
                 } else {
                     gameover.pause();
                 }
