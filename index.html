@@ -89,6 +89,7 @@
             tail = 5;
             lost=0;
             score=0;
+            lastkey=0;
 
             gameover = new Audio('gameover.mp3');
             
@@ -179,23 +180,39 @@
                 }
                 }
             function keyPush(event){
- 
+
                 switch (event.keyCode) {
                     case 37: // Left
+                        if(lastkey!=39){
                         vx = -vel;
                         vy = 0;
+                        lastkey=event.keyCode;
+                        }
+                        
                         break;
                     case 38: // up
+                        if(lastkey!=40){
                         vx = 0;
                         vy = -vel;
+                        lastkey=event.keyCode;
+                        }
+                        
                         break;
                     case 39: // right
+                        if(lastkey!=37){
                         vx = vel;
                         vy = 0;
+                        lastkey=event.keyCode;
+                        }
+                      
                         break;
                     case 40: // down
+                        if(lastkey!=38){
                         vx = 0;
                         vy = vel;
+                        lastkey=event.keyCode;
+                        }
+                       
                         break;         
                     default:
                        
