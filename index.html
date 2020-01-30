@@ -88,11 +88,6 @@
             btn.style.display = 'none';
             flag=1;
             }
-            if (localStorage.recorde) {
-              
-            } else {
-              localStorage.clickcount = number(0);
-            }
             flag2=0;
             vel = 1;
             vx = vy = 0;
@@ -107,6 +102,7 @@
             lost=0;
             score=0;
             lastkey=0;
+            localStorage.recorde =0;
 
             gameover = new Audio('gameover.mp3');
             
