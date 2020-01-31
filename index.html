@@ -195,32 +195,36 @@
             function keyPush(event){
 
                 switch (event.keyCode) {
-                    case 37: // Left
-                        if(lastkey!=39){
+                    case 37:
+                    case 65: // Left
+                        if(lastkey!=39 && lastkey!=68){
                         vx = -vel;
                         vy = 0;
                         lastkey=event.keyCode;
                         }
                         
                         break;
-                    case 38: // up
-                        if(lastkey!=40){
+                    case 38:
+                    case 87: // up
+                        if(lastkey!=40 && lastkey!=83){
                         vx = 0;
                         vy = -vel;
                         lastkey=event.keyCode;
                         }
                         
                         break;
-                    case 39: // right
-                        if(lastkey!=37){
+                    case 39:
+                    case 68: // right
+                        if(lastkey!=37 && lastkey!=65){
                         vx = vel;
                         vy = 0;
                         lastkey=event.keyCode;
                         }
                       
                         break;
-                    case 40: // down
-                        if(lastkey!=38){
+                    case 40:
+                    case 83: // down
+                        if(lastkey!=38 && lastkey!=87){
                         vx = 0;
                         vy = vel;
                         lastkey=event.keyCode;
