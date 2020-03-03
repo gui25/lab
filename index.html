@@ -105,7 +105,7 @@
             localStorage.recorde =0;
 
             gameover = new Audio('gameover.mp3');
-            document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
+            
             
 
             function game(){
@@ -150,7 +150,7 @@
  
             }
             function start(){
-                
+                document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
                 for (var i = 0; i < trail.length; i++) {
                     lastp = trail.length;
                     if(i!=trail.length){
