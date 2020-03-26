@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <html lang="pt-br">
+        <head>
+            <link rel="shortcut icon" type="image/png" href="favicon.png"> 
+            <meta charset=UTF-8/>
+            <title> Guilherme </title>
+    <style>
+        body{
+            background-color:#312e2e;
+        }
+        #botao{
+            position: absolute;
+            bottom: 8px;
+            left: 90%;
+            font-size: 18px;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;color: #fff;
+            background-color: #696969;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 3px #000000;
+
+        }
+        #botao:disabled{
+            position: absolute;
+            bottom: 8px;
+            left: 90%;
+            font-size: 18px;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;color: #fff;
+            background-color: #696969;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 3px #000000;
+            opacity:0;
+
+        }
+        #scoree{
+            position: absolute;
+            height: 40px;
+            left: 90%;
+            font-size: 30px;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color:  #000000;
+
+        }
+        #recorde{
+            position: absolute;
+            height: 40px;
+            left: 5%;
+            font-size: 30px;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color:  #000000;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <a type="button" class="button" id="botao" >Start</a>
+    <p id="scoree"></p>
+    <p id="recorde"></p>
+    <center><canvas id="stage" width="600" height="600"></canvas></center>
+    <script type="text/javascript">
+       
+        window.onload = function(){
+            var stage = document.getElementById('stage');
+            var ctx = stage.getContext("2d");
+            document.addEventListener("keydown", keyPush);
+            setInterval(game, 80);
+            flag=0;
+            btn = document.getElementById("botao");
+            document.getElementById("botao").addEventListener("click", myFunction);
+            function myFunction() {
+            starts = new Audio('startt.mp3');
+            starts.play();
+            btn.style.display = 'none';
+            flag=1;
+            }
+            flag2=0;
+            vel = 1;
+            vx = vy = 0;
+            px =10;
+            py = 15;
+            tp = 30;
+            qp = 20;
+            ax=ay=15;
+            trail = [];
+            n1 = 0;
+            tail = 5;
+            lost=0;
+            score=0;
+            lastkey=0;
+            localStorage.recorde =0;
+
+            gameover = new Audio('gameover.mp3');
+            
+            
+
+            function game(){
+                
+                if(flag==1){
+                    px += vx;
+                py += vy;
+                if (px <0) {
+                    px = qp-1;
+                }
+                if (px > qp-1) {
+                    px = 0;
+                }
+                if (py < 0) {
+                    py = qp-1;
+                }
+                if (py > qp-1) {
+                    py = 0;
+                }
+ 
+                ctx.fillStyle = "black";
+                ctx.fillRect(0,0, stage.width, stage.height);
+ 
+                ctx.fillStyle = "red";
+                ctx.fillRect(ax*tp, ay*tp, tp,tp);
+                start();
+                }
+                trail.push({x:px,y:py })
+                while (trail.length > tail) {
+                    trail.shift();
+                }
+ 
+                if (ax==px && ay==py){
+                    var coinad = new Audio('coin.mp3');
+                    coinad.play();
+                    score++;
+                    document.getElementById("scoree").innerHTML = "Score:" + score;
+                    tail++;
+                    ax = Math.floor(Math.random()*qp);
+                    ay = Math.floor(Math.random()*qp);
+                }
+ 
+            }
+            function start(){
+                document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
+                for (var i = 0; i < trail.length; i++) {
+                    lastp = trail.length;
+                    if(i!=trail.length){
+                    if(i>=0 && i<=10){
+                    ctx.fillStyle = "green";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if(i>=11 && i<=20){
+                    ctx.fillStyle = "purple";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if(i>=21 && i<=30){
+                    ctx.fillStyle = "blue";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if(i>=31 && i<=40){
+                    ctx.fillStyle = "orange";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    } 
+                    if(i>=41){
+                    ctx.fillStyle = "white";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);   
+                    }
+
+                    }
+                    if(i==trail.length-1){
+                    ctx.fillStyle = "yellow";
+                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    }
+                    if (trail[i].x == px && trail[i].y == py)
+                    {
+                        
+                        vx = vy=0; //velocidade zera
+                        tail =5; //corpo vira 5 pos
+                        if(score!=0){
+                        flag2=1;
+                        gameovers(n1);
+                        }
+                    }
+                }
+                }
+            function keyPush(event){
+
+                switch (event.keyCode) {
+                    case 37:
+                    case 65: // Left
+                        if(lastkey!=39 && lastkey!=68){
+                        vx = -vel;
+                        vy = 0;
+                        lastkey=event.keyCode;
+                        }
+                        
+                        break;
+                    case 38:
+                    case 87: // up
+                        if(lastkey!=40 && lastkey!=83){
+                        vx = 0;
+                        vy = -vel;
+                        lastkey=event.keyCode;
+                        }
+                        
+                        break;
+                    case 39:
+                    case 68: // right
+                        if(lastkey!=37 && lastkey!=65){
+                        vx = vel;
+                        vy = 0;
+                        lastkey=event.keyCode;
+                        }
+                      
+                        break;
+                    case 40:
+                    case 83: // down
+                        if(lastkey!=38 && lastkey!=87){
+                        vx = 0;
+                        vy = vel;
+                        lastkey=event.keyCode;
+                        }
+                       
+                        break;         
+                    default:
+                       
+                        break;
+                }
+ 
+ 
+            }
+            function gameovers(){
+                if(n1>0){
+                if(score>localStorage.recorde){
+                localStorage.recorde = Number(score);
+                }
+                gameover.play();
+                score= score-score;
+                document.getElementById("scoree").innerHTML = "Score:" + score;
+                document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
+                } else {
+                    gameover.pause();
+                }
+                n1++;
+            }
+            
+
+ 
+        }
+ 
+    </script>
+</body>
+</html>
