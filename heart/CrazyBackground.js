@@ -1,3 +1,10 @@
+cor = "#000000";
+document.getElementById("left-up").style.backgroundColor = cor;
+document.getElementById("right-up").style.backgroundColor = cor;
+document.getElementById("left-down").style.backgroundColor = cor;
+document.getElementById("right-down").style.backgroundColor = cor;
+
+
 document.addEventListener("click", function(){
     flag = 1;
 });
