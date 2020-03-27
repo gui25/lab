@@ -4,4 +4,4 @@
 
 [Snake Game](https://gui25.github.io/lab/sneakgame/) 🐍 **(It's just a simple Snake Game.)**
 
-Source to https://gui25.github.io/lab/
+Source to https://github.com/gui25/lab
