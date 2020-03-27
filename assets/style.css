@@ -7,7 +7,6 @@ html {
 
 body {
     margin: 0;
-    background-color: #606060;
 }
 
 article,
@@ -246,7 +245,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     color: #24292e;
-    background-color: #fff
+    background-color: #606060;
 }
 
 a {
