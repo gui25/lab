@@ -1,80 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-
-* {
-    margin:0px;
-    padding:0px;
-}
-
-body {
-  
-    background: -webkit-linear-gradient(bottom left, rgb(37, 25, 70) 20px, rgb(25, 13, 68), rgb(37, 15, 78), rgb(16, 21, 70) 90%);
-    font-size: 16px;
-    color: #CCC;
-}
-h1 {
-  font-family: 'Audiowide', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
-h2 {
-  font-family: 'Audiowide', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
-div#principal {
-  
-    max-width: 1024px; 
-    margin: auto;
-    
- }
-
- .flex {
-    display:flex;
-}
-
-.flex-end {
-   justify-content: flex-end;
-
-}
-
-.flex-around {
-    justify-content: space-around;
-  }
-
-.flex-between {
-    justify-content: space-between;
-  }
-
-  .image-header {
-    background-image: url("http://www.baltana.com/files/wallpapers-17/Dark-Purple-HD-Desktop-Wallpaper-43734.jpg");
-    width: 100%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-
-  }
-
-  .image-header h1 {
-      text-align: center;
-      padding-top:150px;
-      color:#fff;
-      font-size: 3em;
-  }
-
-  nav#principal {
-    padding: 4px;
-    background: -webkit-linear-gradient(bottom left, rgb(56, 21, 153) 20px, rgb(60, 32, 160), rgb(73, 26, 161), rgb(54, 66, 172) 90%);
-    font-family: 'Audiowide', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size:1.5em;
-  }
-
-  nav#principal a {
-    
-    color:#fff;
-    padding:5px;
-    text-decoration:none;
-    text-decoration-color: fff;
-}
-
-nav#principal a:hover {
-  background-color:rgb(85, 45, 160);
-  color:#002;
-}    
+<!DOCTYPE html>
+	<html lang="pt-br">
+	<!-- Cabeçalho -->
+	<head>
+		<meta charset="utf-8">
+		<title> Curso de HTMl5 </title>
+		<meta name="author" content="<seu nome>">
+		<meta name="description" content="Escola Mesquita - WEB - 2019/02 - Trabalho 2">
+		<link rel="stylesheet" href="estilo.css" >
+	</head>
+	<!-- Corpo do Documento -->
+	<body>
+        <div id="principal">
+		        <!-- Cabeçalho  da página-->
+                <header>
+                    <div class="image-header">
+                        <h1>Estúdio Fotográfico</h1>
+                    </div>
+                </header>
+                <!-- Menu do Site--> 
+                <nav id="principal" class="flex flex-between">
+                   <a href="#sec-estudio">ESTÚDIO</a> 
+                   <a href="#sec-portfolio">PORTFÓLIO</a> 
+                   <a href="#sec-testemunhos">TESTEMUNHOS</a> 
+                   <a href="#sec-contato">CONTATO</a> 
+                </nav>
+                <br>
+                <nav id="imagem" class="flex flex-around">
+                        <a id="opt-estudio" href="#sec-estudio" class="flex"><p>ESTUDIO</p></a> 
+                        <a id="opt-portfolio" href="#sec-portfolio" class="flex">PORTFÓLIO</a>  
+                </nav>
+                <br>
+                <section id="sec-estudio">
+                    <h2>Estudio</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem. Suspendisse sed ipsum dignissim, maximus nunc sed, molestie justo. Sed feugiat varius tortor, vel hendrerit felis blandit eu.
+                    Morbi sagittis velit nec purus molestie, quis laoreet enim molestie. Integer venenatis ipsum vitae augue efficitur, eu sagittis enim ullamcorper. Cras commodo massa nec nunc vulputate hendrerit. Aliquam sit amet suscipit urna. Phasellus quis orci lacinia, consequat nibh nec, efficitur ipsum. Ut faucibus, massa ac iaculis ullamcorper, urna turpis molestie lectus, eu finibus libero augue at velit. Maecenas sapien leo, malesuada quis mauris at, ornare tempor dolor. Duis pellentesque volutpat orci.
+                    </p>
+                </section>
+                <br>
+                <section id="sec-portfolio">
+                        <h2>Portfólio</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem. Suspendisse sed ipsum dignissim, maximus nunc sed, molestie justo. Sed feugiat varius tortor, vel hendrerit felis blandit eu.
+                        Morbi sagittis velit nec purus molestie, quis laoreet enim molestie. Integer venenatis ipsum vitae augue efficitur, eu sagittis enim ullamcorper. Cras commodo massa nec nunc vulputate hendrerit. Aliquam sit amet suscipit urna. Phasellus quis orci lacinia, consequat nibh nec, efficitur ipsum. Ut faucibus, massa ac iaculis ullamcorper, urna turpis molestie lectus, eu finibus libero augue at velit. Maecenas sapien leo, malesuada quis mauris at, ornare tempor dolor. Duis pellentesque volutpat orci.
+                        </p>
+                </section>
+                <br>
+                <section id="sec-testemunhos">
+                        <h2>Testemunhos</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem. Suspendisse sed ipsum dignissim, maximus nunc sed, molestie justo. Sed feugiat varius tortor, vel hendrerit felis blandit eu.
+                        Morbi sagittis velit nec purus molestie, quis laoreet enim molestie. Integer venenatis ipsum vitae augue efficitur, eu sagittis enim ullamcorper. Cras commodo massa nec nunc vulputate hendrerit. Aliquam sit amet suscipit urna. Phasellus quis orci lacinia, consequat nibh nec, efficitur ipsum. Ut faucibus, massa ac iaculis ullamcorper, urna turpis molestie lectus, eu finibus libero augue at velit. Maecenas sapien leo, malesuada quis mauris at, ornare tempor dolor. Duis pellentesque volutpat orci.
+                        </p>
+                </section>
+                <br>
+                <section id="sec-contato">
+                        <h2>Contato</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem. Suspendisse sed ipsum dignissim, maximus nunc sed, molestie justo. Sed feugiat varius tortor, vel hendrerit felis blandit eu.
+                        Morbi sagittis velit nec purus molestie, quis laoreet enim molestie. Integer venenatis ipsum vitae augue efficitur, eu sagittis enim ullamcorper. Cras commodo massa nec nunc vulputate hendrerit. Aliquam sit amet suscipit urna. Phasellus quis orci lacinia, consequat nibh nec, efficitur ipsum. Ut faucibus, massa ac iaculis ullamcorper, urna turpis molestie lectus, eu finibus libero augue at velit. Maecenas sapien leo, malesuada quis mauris at, ornare tempor dolor. Duis pellentesque volutpat orci.
+                        </p>
+                </section>
+                
+     
+        
+                <!-- Rodapé do site-->
+                <footer>Rodapé</footer>
+     
+    <!—Fim da DIV principal-->	
+		</div>
+	</body>
+</html>
