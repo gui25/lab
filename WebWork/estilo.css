@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 * {
     margin:0px;
@@ -12,11 +12,11 @@ body {
     color: #CCC;
 }
 h1 {
-  font-family: 'Press Start 2P', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Audiowide', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 h2 {
-  font-family: 'Press Start 2P', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Audiowide', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 div#principal {
@@ -62,7 +62,7 @@ div#principal {
   nav#principal {
     padding: 4px;
     background: -webkit-linear-gradient(bottom left, rgb(56, 21, 153) 20px, rgb(60, 32, 160), rgb(73, 26, 161), rgb(54, 66, 172) 90%);
-    font-family: 'Press Start 2P', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Audiowide', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:1.5em;
   }
 
