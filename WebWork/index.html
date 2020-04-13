@@ -1,65 +1,75 @@
 <!DOCTYPE html>
-	<html lang="pt-br">
+<html lang="pt-br">
 
-	<head>
-		<meta charset="utf-8">
-		<title> WorkWeb </title>
-		<meta name="author" content="Guilherme Bernardo">
-		<meta name="description" content="WEBWORK">
-                <link rel="stylesheet" href="estilo.css" >
-                <link rel="shortcut icon" type="image/png" href="favicon.png"> 
-	</head>
-	
-	<body>
-        <div id="principal">
-		        
-                <header>
-                    <div class="image-header">
-                        <h1>Estúdio Fotográfico</h1>
-                    </div>
-                </header>
+<head>
+        <meta charset="utf-8">
+        <title> WorkWeb </title>
+        <meta name="author" content="Guilherme Bernardo">
+        <meta name="description" content="WEBWORK">
+        <link rel="stylesheet" href="estilo.css" >
+        <link rel="shortcut icon" type="image/png" href="favicon.png"> 
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.css">
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.js"></script>
+</head>
+
+<body>
+<div id="principal">
                 
-                <nav id="principal" class="flex flex-between">
-                   <a href="#sec-estudio">ESTÚDIO</a> 
-                   <a href="#sec-portfolio">PORTFÓLIO</a> 
-                   <a href="#sec-testemunhos">TESTEMUNHOS</a> 
-                   <a href="#sec-contato">CONTATO</a> 
-                </nav>
-                <br>
-                <nav id="imagem" class="flex flex-around">
-                        <a id="opt-estudio" href="#sec-estudio" class="flex"><p>ESTUDIO</p></a> 
-                        <a id="opt-portfolio" href="#sec-portfolio" class="flex"><p>PORTFÓLIO</p></a>  
-                </nav>
-                <br>
-                <section id="sec-estudio">
-                    <h2>Estudio</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
-                    </p>
-                </section>
-                <br>
-                <section id="sec-portfolio">
-                        <h2>Portfólio</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
-                        </p>
-                </section>
-                <br>
-                <section id="sec-testemunhos">
-                        <h2>Testemunhos</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
-                        </p>
-                </section>
-                <br>
-                <section id="sec-contato">
-                        <h2>Contato</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
-                        </p>
-                </section>
-                
-     
+        <header>
+        <div class="image-header">
+                <h1>Estúdio Fotográfico</h1>
+        </div>
+        </header>
         
-               
-                <footer>Rodapé</footer>
+        <nav id="principal" class="flex flex-around">
+        <a href="#sec-estudio">ESTÚDIO</a> 
+        <a href="#sec-portfolio">PORTFÓLIO</a> 
+        <a href="#sec-testemunhos">TESTEMUNHOS</a> 
+        <a href="#sec-contato">CONTATO</a> 
+        </nav>
+        <br>
+        <header id="imagem" class="principal flex flex-around">
+                <img id="opt-estudio" href="#sec-estudio" class="principal flex" width="400px" src="img/estudio.jpg">
 
-		</div>
-	</body>
+                
+
+                <img id="opt-portfolio" href="#sec-portfolio" class="principal flex" width="400px" src="img/portfolio.png">
+        </header>
+        <br>
+        <section id="sec-estudio">
+        <h2>Estudio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
+        </p>
+        </section>
+        <br>
+        <section id="sec-portfolio">
+                <h2>Portfólio</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
+                </p>
+        </section>
+        <br>
+        <section id="sec-testemunhos">
+                <h2>Testemunhos</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
+                </p>
+        </section>
+        <br>
+        <section id="sec-contato">
+                <h2>Contato</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
+                </p>
+        </section>
+        
+
+
+
+        <footer>Rodapé</footer>
+
+        </div>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
 </html>
+        
