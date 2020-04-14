@@ -8,7 +8,10 @@
         <meta name="description" content="WEBWORK">
         <link rel="stylesheet" href="estilo.css" >
         <link rel="shortcut icon" type="image/png" href="favicon.png"> 
-
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.css">
         <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.js"></script>
@@ -56,17 +59,35 @@
                 </p>
         </section>
         <br>
-        <section id="sec-contato">
+
+        <footer class="footer">
+        <section id="contact" class="flex" style="flex-direction: column;">
                 <h2>Contato</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
+                <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                
                 </p>
+                <br/>
+                <form >
+                <i class="tiny material-icons prefix">account_circle</i>
+                <label for="name" style="color: aliceblue;">Nome: </label>
+                <input id="name" type="text" placeholder="Digite seu nome"><br>
+                <i class="tiny material-icons prefix">email</i>
+                <label for="email" style="color: aliceblue;">Email: </label>
+                <input id="email" type="text" placeholder="Digite seu email"></br>
+                <div>
+                        <i class="tiny material-icons prefix">message</i><text style="color: aliceblue;">Mensagem:</text>
+                        <br/>
+                        <textarea id="msg" rows="20" cols="50" ></textarea><br>
+                </div>
+                <br/>
+                <div id="botao">
+                        <input id="submite" type="submit" name="botao" placeholder="Enviar" class="botaoEnviar fundo">
+                </div>
+                </form>
         </section>
-        
-
-
-
-        <footer>Rodapé</footer>
-
+        </footer>
         </div>
         <script type="text/javascript" src="js/materialize.min.js"></script>
 

@@ -97,3 +97,48 @@ nav#principal a:hover {
   
   border-radius: 5px;
 }
+
+footer section
+{
+    margin-left: 7% !important;
+    margin-right: 7% !important;
+}
+
+footer.footer
+{
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background: -webkit-linear-gradient(bottom left, #312455 20px, rgb(57, 32, 145), rgb(84, 30, 185), rgb(46, 52, 105) 90%);
+}
+
+
+.footer label
+{
+    font-size: medium;
+}
+
+#botao{ text-align: center }
+.botaoEnviar{
+    width: 350px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.fundo{
+  background-color: rgb(78, 42, 163);
+  border-radius: 15px;
+  padding: 15px 32px;
+  cursor: pointer;
+}
+
+.footer textarea#msg
+{
+ 
+    width: 500px;
+    height: 100px;
+    resize: none;
+}
