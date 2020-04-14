@@ -18,6 +18,9 @@
                         padding: 0 1rem;
                         border-bottom: 1px solid #ddd;
                 }
+                .slider .indicators .indicator-item.active {
+                background-color: #d159d6 !important;
+                }
                     
         </style>
         <!--Import Google Icon Font-->
@@ -63,7 +66,36 @@
                 <img src="img/img2.png" class=" materialboxed ">
                 <img src="img/img3.png" class=" materialboxed ">
                 <img src="img/img4.png" class="materialboxed ">
-            </div>
+        </div>
+        <br/>
+        <div class="slider">  
+                <ul class="slides">  
+                        <li>  
+                        <img src="https://synthspiria.com/wp-content/uploads/2018/01/image-dossier-synthwave.jpg">  
+                        <!-- random image -->  
+                        <div class="caption center-align">  
+                        <h3>Futuro</h3>  
+                        
+                        </div>  
+                        </li>  
+                        <li>  
+                        <img src="https://i.pinimg.com/736x/ad/1e/3e/ad1e3e727021639a5c8c55606ac16c5a.jpg">  
+                        <!-- random image -->  
+                        <div class="caption center-align">  
+                        <h3>Estilo</h3>  
+                         
+                        </div>  
+                        </li>  
+                        <li>  
+                        <img src="https://i.pinimg.com/originals/00/5b/45/005b459d5d1626274aee2ed4a5dfd339.jpg">  
+                        <!-- random image -->  
+                        <div class="caption center-align">  
+                        <h3>Profissionalismo</h3>  
+                         
+                        </div>  
+                        </li>  
+                </ul>  
+        </div>  
         </section>
         <br>
         <section id="sec-portfolio">
@@ -122,7 +154,7 @@
                 </div>
                 <br/>
                 <div style="display: flex; flex-direction: row-reverse;">
-                        <img src="https://media.gettyimages.com/photos/conceptual-businessman-cloud-computing-background-picture-id1127192912?k=6&m=1127192912&s=612x612&w=0&h=KfzpUqUnL9RV-0bj1vNlBllwBOB1r6yUJKkfkjlPhHA=" class="image" style="border-radius: 8px;">
+                        <img src="https://i.pinimg.com/originals/00/5b/45/005b459d5d1626274aee2ed4a5dfd339.jpg" class="image" style="border-radius: 8px;">
                         <p class="text" style="margin: 5%;">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -131,8 +163,11 @@
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
                             eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                         </p>
-                    </div>
+                </div>
+                
         </section>
+        
+              
         <br>
 
         <footer class="footer">
@@ -175,7 +210,18 @@
         var elems = document.querySelectorAll('.materialboxed');
         var instances = M.Materialbox.init(elems, options);
         });
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, options);
+        });
+
+
         </script>
+        <script> 
+        $(document).ready(function() {  
+                $(".slider").slider({ full_width: true });  
+        });  
+        </script>  
 
 </body>
 </html>

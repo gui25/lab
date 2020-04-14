@@ -149,3 +149,12 @@ footer.footer
     height: 100px;
     resize: none;
 }
+
+h3{
+  font-family: 'Audiowide', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 0.2em rgb(57, 28, 65), 0 0 0.2em rgb(61, 33, 61), 0 0 0.2em rgb(67, 43, 77);
+  color: rgb(189, 32, 189);
+  font-size: 100px !important;
+}
+
+
