@@ -86,7 +86,7 @@ div#principal {
   }
 
   nav#principal a {
-    
+    font-size: x-large !important;
     color:#fff;
     padding:5px;
     text-decoration:none;
@@ -94,11 +94,10 @@ div#principal {
 }
 
 nav#principal a:hover {
-  
-  background-color:rgb(85, 45, 160);
-  color:#002;
-  border-radius: 15px;
-}    
+  background-color: rgb(64, 28, 148);
+  color: #002;
+  border-radius: 4px;
+}
 
 #opt-estudio{
   
