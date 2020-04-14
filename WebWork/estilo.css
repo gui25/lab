@@ -100,7 +100,12 @@ nav#principal a:hover {
 }
 
 #opt-estudio{
-  
+  filter: brightness(200%);
+  border-radius: 5px;
+}
+
+#opt-portfolio{
+  filter: brightness(150%);
   border-radius: 5px;
 }
 
