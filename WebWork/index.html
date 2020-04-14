@@ -8,6 +8,18 @@
         <meta name="description" content="WEBWORK">
         <link rel="stylesheet" href="estilo.css" >
         <link rel="shortcut icon" type="image/png" href="favicon.png"> 
+        <style>
+                .collapsible-header {
+                        display: block;
+                        background-color: transparent !important; 
+                        cursor: pointer;
+                        height: 3rem;
+                        line-height: 3rem;
+                        padding: 0 1rem;
+                        border-bottom: 1px solid #ddd;
+                }
+                    
+        </style>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
@@ -45,12 +57,40 @@
         <h2>Estudio</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
         </p>
+        <br/>
+        <div style="display: flex; justify-content: space-between;">
+                <img src="img/img1.png" class="materialboxed pulse">
+                <img src="img/img2.png" class=" materialboxed pulse">
+                <img src="img/img3.png" class=" materialboxed pulse ">
+                <img src="img/img4.png" class="materialboxed pulse">
+            </div>
         </section>
         <br>
         <section id="sec-portfolio">
                 <h2>Portfólio</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
                 </p>
+                <br/>
+                <ul class="collapsible">
+                        <li>
+                          <div class="collapsible-header active"><i class="material-icons">camera_enhance</i>2019</div>
+                                <div class="collapsible-body">
+                                        <span>
+                                                <div style="display: flex !important; justify-content: space-around !important; flex-direction: row !important; flex-wrap: wrap !important;">
+                                                        <img src="https://media.gettyimages.com/photos/little-girl-and-her-mother-holding-arcade-machine-games-joystick-picture-id983169304?k=6&m=983169304&s=612x612&w=0&h=Gx8X54d00i5dYjzHiiAwCIMB3inUpfzaM6tO8hQVdMU=" class="image portfolio wide">
+                                                        <img src="https://media.gettyimages.com/photos/arcade-and-arcade-games-picture-id1134353372?k=6&m=1134353372&s=612x612&w=0&h=yWJiMJqshMdfEqZDVHQWW2l7tBAEdrothhgvsXWGhW4=" class="image portfolio">
+                                                        <img src="https://media.gettyimages.com/photos/air-hockey-paddle-picture-id172350599?k=6&m=172350599&s=612x612&w=0&h=9QQ8Iyl-US2zd7DqoLKCcgD3hFpGjynzwR_MhFDAMEM=" class="image portfolio wide">
+                                                        <img src="https://media.gettyimages.com/photos/shocked-audience-enjoying-at-movie-theater-picture-id1146819289?k=6&m=1146819289&s=612x612&w=0&h=lhAfmqJNfg5olfrCzmA2qUms3J9-GbRsOwdaXYFQqVg=" class="image portfolio notwide">
+                                                        <img src="https://media.gettyimages.com/photos/laser-tag-picture-id171159394?k=6&m=171159394&s=612x612&w=0&h=lb69pnknZF44nzOQhB8pb0_O4NkvOxmCCyMiQCyjPZY=" class="image portfolio wide">
+                                                </div>
+                                        </span>
+                                </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header active"><i class="material-icons">videogame_asset</i>2018</div>
+                          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                </ul>
         </section>
         <br>
         <section id="sec-testemunhos">
@@ -89,7 +129,14 @@
         </section>
         </footer>
         </div>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+        
+            
+        <script type="text/javascript" src="js/materialize.min.js">
+        document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.collapsible');
+                var instances = M.Collapsible.init(elems, options);
+        });
+        </script>
 
 </body>
 </html>

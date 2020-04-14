@@ -26,6 +26,13 @@ div#principal {
     
     
  }
+
+ 
+.image
+{
+    max-width: 300px;
+}
+
  img#principal {
   max-width: 1024px; 
   margin: auto;
