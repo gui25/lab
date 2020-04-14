@@ -103,7 +103,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper dapibus ante, at rutrum orci sollicitudin vel. Morbi id lacinia augue, cursus elementum lacus. Vestibulum id turpis a ante mattis blandit. Mauris dictum molestie enim vel suscipit. Curabitur scelerisque sapien in ante posuere varius. Cras quam justo, feugiat a velit et, accumsan congue nulla. Nam luctus libero ultrices justo sodales, in gravida ante sodales. Ut bibendum ex tortor, vitae gravida justo porta quis. Fusce convallis est justo, vel viverra velit dignissim id. Ut pulvinar porttitor sem.
                 </p>
                 <br/>
-                <ul class="collapsible">
+                <ul class = "collapsible" data-collapsible = "expandable">
                         <li>
                           <div class="collapsible-header active"><i class="material-icons">camera_enhance</i>2019</div>
                                 <div class="collapsible-body">
@@ -218,9 +218,9 @@
         
             
         <script type="text/javascript" src="js/materialize.min.js">
-        document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.collapsible');
-                var instances = M.Collapsible.init(elems, options);
+        var elem = document.querySelector('.collapsible.expandable');
+        var instance = M.Collapsible.init(elem, {
+        accordion: false
         });
         document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.materialboxed');
