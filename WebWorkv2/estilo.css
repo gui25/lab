@@ -60,7 +60,7 @@ div#principal {
 }
 
   .image-header {
-    background-image: url("http://www.baltana.com/files/wallpapers-17/Dark-Purple-HD-Desktop-Wallpaper-43734.jpg");
+    background-image: url("http://www.baltana.com/files/wallpapers-17/Dark-Purple-HD-Desktop-Wallpaper-43734.jpg") ;
     width: 100%;
     height: 300px;
     filter: blur(0.6px);
