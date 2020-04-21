@@ -24,12 +24,16 @@
             -moz-opacity: 0.65;
             filter: alpha(opacity=65);
         }
+
+        ::placeholder {
+        color: rgb(15, 15, 15);
+        }
     </style>
 </head>
 <body>
     <header style="display: flex;">
-    <input type="text" placeholder="TYPE THE URL OF YOUR FAVICON .PNG" id="myInput" style="width: 100%; color:black;">
-    <button type="button" onclick="getInputValue();">Favicon Change</button>
+    <input type="text" placeholder="TYPE THE URL OF YOUR FAVICON .PNG" id="myInput" style="width: 100%; background-color: #ccc;">
+    <button type="button" onclick="getInputValue();" style="background-color: rgb(179, 179, 179);">Favicon Change</button>
     </header>
     <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
         <img id = "1" onClick="reply_click(this.id)" src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/crazy-face.png">

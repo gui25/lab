@@ -6,7 +6,7 @@
 
 [Snake Game](https://gui25.github.io/lab/sneakgame/) 🐍 **(Simple Snake Game.)**      **(Only on PC)**
 
-[Favicon Changer](https://gui25.github.io/lab/faviconchanger/) 👨🏼‍💻 **(Just Click in some emoji.)**
+[Favicon Changer](https://gui25.github.io/lab/faviconchanger/) 👨🏼‍💻 **(You can click in some emoji or input your own url .png favicon.)**
 
 | [Web Work V1](https://gui25.github.io/lab/WebWork/) | [Web Work V2](https://gui25.github.io/lab/WebWorkv2/) |  🖥️ **(web work from my computer technician course.)** 
 
