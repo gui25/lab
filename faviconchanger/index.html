@@ -32,9 +32,10 @@
 </head>
 <body>
     <header style="display: flex;">
-    <input type="text" placeholder="TYPE THE URL OF YOUR FAVICON .PNG" id="myInput" style="width: 100%; background-color: #ccc; border-color: black;">
-    <button type="button" onclick="getInputValue();" style="background-color: rgb(179, 179, 179); border-color: black;">Favicon Change</button>
+        <input type="text" placeholder="TYPE THE URL OF YOUR FAVICON .PNG" id="myInput" style="width: 100%; background-color: #ccc; border-color: black;">
+        <button type="button" onclick="getInputValue();" style="background-color: rgb(179, 179, 179); border-color: black;">Favicon Change</button>
     </header>
+
     <div style="display: flex; justify-content: space-between; flex-wrap: wrap; ">
         <img id = "1" onClick="reply_click(this.id)" src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/crazy-face.png">
         <img id = "2" onClick="reply_click(this.id)" src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/face-with-raised-eyebrow.png">
@@ -77,6 +78,7 @@
             // alert(favicon);
             document.querySelector("link[rel*='icon']").href = favicon;
         }
+
         function getInputValue(){
             var inputVal = document.getElementById("myInput").value;
 
