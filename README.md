@@ -1,4 +1,4 @@
-# Experimentos 
+# Experiments 
 
 [gui25.github.io/lab/](https://gui25.github.io/lab/) 🚀 **(list of everything.)**
 
