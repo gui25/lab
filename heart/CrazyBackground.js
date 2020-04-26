@@ -11,16 +11,22 @@ var intervalo = window.setInterval(function() {
     // document.body.style.backgroundColor = cor;
 
     cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("left-up").style.backgroundColor = cor;
+    document.getElementById("first").style.backgroundColor = cor;
     
     cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("right-up").style.backgroundColor = cor;
+    document.getElementById("second").style.backgroundColor = cor;
+    
+    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+    document.getElementById("third").style.backgroundColor = cor;
 
     cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("left-down").style.backgroundColor = cor;
-    
+    document.getElementById("fourth").style.backgroundColor = cor;
+
     cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("right-down").style.backgroundColor = cor;
+    document.getElementById("fifth").style.backgroundColor = cor;
+
+    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+    document.getElementById("sixth").style.backgroundColor = cor;
 
     
     }
