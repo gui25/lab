@@ -6,37 +6,58 @@
     <title>CrazyBackground</title>
     <link rel="shortcut icon" type="image/png" href="favicon.png"> 
     <script src="./CrazyBackground.js" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.js"></script>
+
     <style>
         body{
             background-color: #0e0c0c;
         }
-
     </style>
+
 </head>
 <body>
+    <ul class = "collapsible" data-collapsible = "expandable">
+        <li>
+            <div class="collapsible-header active"><i class="material-icons">camera_enhance</i>HELP (Click Here)</div>
+                <div class="collapsible-body">
+                    <span>
+                        <header style="display: flex; justify-content: center ; flex-wrap: wrap; ">
+                            <h1 style="color: gray; font-size: 30px;">One left-click with the mouse to change the background. <br><br> two left-clicks with the mouse to change the heart <br><br> One click in space to stop.</h1>
+                        </header>
+                    </span>
+                </div>
+            </li>
+        <li>                        
+    </ul>            
     <div id="mother" style="display: flex; justify-content: space-between ; flex-wrap: wrap; ">
-        <div id="first" style="margin: 3px;">
-            <img src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
+        <div id="first" style="margin: 3px; border-radius: 50px;">
+            <img id="1" onclick="ClickImg(this.id)" src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
         </div>
         
-        <div id="second" style="margin: 3px;">
-            <img src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
+        <div id="second" style="margin: 3px; border-radius: 50px;">
+            <img id="2" onclick="ClickImg(this.id)" src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
         </div>
 
-        <div id="third" style="margin: 3px;">
-            <img src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
+        <div id="third" style="margin: 3px; border-radius: 50px;">
+            <img id="3" onclick="ClickImg(this.id)" src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
         </div>
 
-        <div id="fourth" style="margin: 3px;">
-            <img src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
+        <div id="fourth" style="margin: 3px; border-radius: 50px;">
+            <img id="4" onclick="ClickImg(this.id)" src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
         </div>
 
-        <div id="fifth" style="margin: 3px;">
-            <img src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
+        <div id="fifth" style="margin: 3px; border-radius: 50px;">
+            <img id="5" onclick="ClickImg(this.id)" src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
         </div>
 
-        <div id="sixth" style="margin: 3px;">
-            <img src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
+        <div id="sixth" style="margin: 3px; border-radius: 50px;">
+            <img id="6" onclick="ClickImg(this.id)" src="heart.png" style=" display: block; margin-left: auto; margin-right: auto; max-width: 400px; max-height: 400px;">
         </div>
     </div>
 
