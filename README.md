@@ -10,4 +10,6 @@
 
 | [Web Work V1](https://gui25.github.io/lab/WebWork/) | [Web Work V2](https://gui25.github.io/lab/WebWorkv2/) |  🖥️ **(web work from my computer technician course.)** 
 
+[Take Another page](https://gui25.github.io/lab/takepage/) 📋✂️ **(You can take another page to your own.)**
+
 Source to [https://github.com/gui25/lab/](https://github.com/gui25/lab/)
