@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>TakeOtherPage</title>
+    <style>
+        body{
+            background-color: rgb(20, 20, 20);
+        }
+
+    </style>
+</head>
+<body style="width: 100%; height: 100%;">
+    <input type="text" placeholder="TYPE THE URL OF ANOTHER PAGE" id="myInput" style="width: 100%; background-color: #ccc; border-color: black; height: 35px;">
+    <button type="button" onclick="getInputValue();" style="background-color: rgb(179, 179, 179); border-color: black; width: 100%; height: 40px;">Take Another Page</button>
+
+    <p style="color:rgb(202, 202, 202)">
+        some websites will not work, like google but you can do with someones like 
+        <br>
+        https://glitch.com/
+        <br>
+        https://sourcemaking.com/design_patterns
+        <br>
+        https://course.fast.ai/
+        
+    </p>
+
+    <iframe id="page" src="https://gui25.github.io/lab/" style="border: none; width: 100%; height: 100%;"></iframe>
+
+    <script type="text/javascript">
+        function getInputValue(){
+            var inputVal = document.getElementById("myInput").value;
+
+            document.getElementById("page").src = inputVal;
+        }
+    </script>
+
+</body>
+</html>

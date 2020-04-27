@@ -6,12 +6,14 @@ document.addEventListener("keydown", function keyPush(event){
         break;
     }
 });
-document.addEventListener("click", function(){
+  
+function RespondClick(){ 
     flag = 1;
-});
-document.addEventListener("dblclick", function(){
-    flag = 0;
-});
+};
+
+function DBRespondClick(){ 
+        flag = 0;
+};
 
 
 var intervalo = window.setInterval(function() {
