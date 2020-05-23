@@ -376,10 +376,10 @@
     minSpeedX: 1.10,
     maxSpeedX: 1.20,
     minSpeedY: 1.10,
-    maxSpeedY: 1.30,
+    maxSpeedY: 2.30,
     directionX: 'center', // 'center', 'left' or 'right'. 'center' = dots bounce off edges
     directionY: 'center', // 'center', 'up' or 'down'. 'center' = dots bounce off edges
-    density: 15000, // How many particles will be generated: one particle every n pixels
+    density: 16000, // How many particles will be generated: one particle every n pixels
     dotColor: '#666666',
     lineColor: '#666666',
     particleRadius: 15, // Dot size
