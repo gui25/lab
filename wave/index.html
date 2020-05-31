@@ -1,63 +1,62 @@
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
-<meta name="apple-mobile-web-app-title" content="CodePen">
-<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-<title>CodePen - A Pen by  Alfons Nilsson</title>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-</head>
-<body translate="no">
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-<script src="https://aaserver.net/libraries/gameCanvas/gameCanvas-4.0.js"></script>
-<script src="https://aaserver.net/libraries/vector/vector-1.0.js"></script>
-<script id="rendered-js">
-var gc = new GameCanvas();
-
-var t = 0;
-
-loop();
-function loop() {
-  background("black");
-
-  var functions = [
-  function (x) {
-    return Math.sin(x * 6 + t * 0.01) * 100 * Math.sin(t * 0.03);
-  },
-  function (x) {
-    return (Math.sin(x * 6 + t * 0.01) * 120 + 20) * Math.sin(t * 0.03);
-  }];
-
-
-  var colors = ["rgb(255, 240, 230)", "rgb(248, 47, 77)"];
-  for (var j = 0; j < 2; j++) {
-    var color = colors[j];
-    var func = functions[j];
-    beginPath();
-    for (var i = 0; i <= 1 + 0.01; i += 0.01) {
-      lineTo(i * width, height - 200 + func(i));
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+    <title>Wave Adaptation</title>
+    <script>
+    window.console = window.console || function(t) {};
+    </script>
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
     }
-    lineTo(width, height);
-    lineTo(0, height);
-    closePath();
-    fillStyle(color);
-    fill();
-  }
+    </script>
 
-  t++;
-  update();
-  requestAnimationFrame(loop);
-}
-//# sourceURL=pen.js
-    </script><canvas width="1366" height="592" style="position: fixed; top: 0px; left: 0px;"></canvas>
+</head>
+
+<body translate="no">
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://aaserver.net/libraries/gameCanvas/gameCanvas-4.0.js"></script>
+    <script src="https://aaserver.net/libraries/vector/vector-1.0.js"></script>
+    <script id="rendered-js">
+    var gc = new GameCanvas();
+
+    var t = 0;
+
+    loop();
+    function loop() {
+        background("black");
+
+        var functions = [
+        function (x) {
+            return Math.sin(x * 6 + t * 0.01) * 100 * Math.sin(t * 0.03);
+        },
+        function (x) {
+            return (Math.sin(x * 6 + t * 0.01) * 120 + 20) * Math.sin(t * 0.03);
+        }];
+
+
+        var colors = ["rgb(255, 240, 230)", "rgb(248, 47, 77)"];
+        for (var j = 0; j < 2; j++) {
+            var color = colors[j];
+            var func = functions[j];
+            beginPath();
+            for (var i = 0; i <= 1 + 0.01; i += 0.01) {
+            lineTo(i * width, height - 200 + func(i));
+            }
+            lineTo(width, height);
+            lineTo(0, height);
+            closePath();
+            fillStyle(color);
+            fill();
+        }
+
+    t++;
+    update();
+    requestAnimationFrame(loop);
+    }
+    </script>
+    <canvas width="1366" height="592" style="position: fixed; top: 0px; left: 0px;"></canvas>
 
 
 </body>
