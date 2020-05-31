@@ -2,7 +2,11 @@
 document.addEventListener("keydown", function keyPush(event){
     switch (event.code) {
         case "Space":
-            flag = 2;
+            if(flag!=2){
+                flag=2;
+            } else {
+                flag = 3;
+            }
         break;
     }
 });
@@ -42,7 +46,7 @@ var intervalo = window.setInterval(function() {
     
     }
 
-    if(flag == 0){
+    if(flag == 2){
             function colors(){
                 choose = Math.floor(Math.random() * 10) + 1; 
 
