@@ -25,7 +25,7 @@
 
     loop();
     function loop() {
-        background("black");
+        background("rgb(10, 10, 10)");
 
         var functions = [
         function (x) {
@@ -36,13 +36,13 @@
         }];
 
 
-        var colors = ["rgb(255, 240, 230)", "rgb(248, 13, 13)"];
+        var colors = ["rgb(15, 100, 15)", "rgb(0, 0, 0)"];
         for (var j = 0; j < 2; j++) {
             var color = colors[j];
             var func = functions[j];
             beginPath();
-            for (var i = 0; i <= 1 + 0.01; i += 0.01) {
-            lineTo(i * width, height - 200 + func(i));
+            for (var i = 0; i <= 100; i += 0.18) {
+            lineTo(i * width, height - 350 + func(i));
             }
             lineTo(width, height);
             lineTo(0, height);
