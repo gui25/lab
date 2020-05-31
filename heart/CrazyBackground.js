@@ -21,7 +21,7 @@ function DBRespondClick(){
 
 
 var intervalo = window.setInterval(function() {
-    if(flag == 1){
+    if(flag == 2){
     // cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
     // document.body.style.backgroundColor = cor;
     
@@ -46,7 +46,7 @@ var intervalo = window.setInterval(function() {
     
     }
 
-    if(flag == 2){
+    if(flag == 1){
             function colors(){
                 choose = Math.floor(Math.random() * 10) + 1; 
 
