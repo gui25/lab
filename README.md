@@ -12,6 +12,8 @@
 
 [Particle](https://gui25.github.io/lab/particle/) 🌌 **(Just some particles.)**
 
+[Distorted Waves](https://gui25.github.io/lab/wave/) 🌊 **(Crazy distorted green wave.)**
+
 [Take Another page](https://gui25.github.io/lab/takepage/) 📋✂️ **(You can take another page to your own.)**
 
 Source to [https://github.com/gui25/lab/](https://github.com/gui25/lab/)
