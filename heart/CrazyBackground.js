@@ -16,37 +16,14 @@ function RespondClick(){
 };
 
 function DBRespondClick(){ 
-        flag = 0;
+        flag = 3;
 };
 
 
 var intervalo = window.setInterval(function() {
-    if(flag == 2){
-    // cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    // document.body.style.backgroundColor = cor;
-    
-    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("first").style.backgroundColor = cor;
-    
-    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("second").style.backgroundColor = cor;
-    
-    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("third").style.backgroundColor = cor;
 
-    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("fourth").style.backgroundColor = cor;
 
-    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("fifth").style.backgroundColor = cor;
-
-    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-    document.getElementById("sixth").style.backgroundColor = cor;
-
-    
-    }
-
-    if(flag == 1){
+    if(flag == 1 ||flag == 2 ){
             function colors(){
                 choose = Math.floor(Math.random() * 10) + 1; 
 
@@ -105,6 +82,8 @@ var intervalo = window.setInterval(function() {
             document.getElementById("5").style.webkitFilter = colors();
 
             document.getElementById("6").style.webkitFilter = colors();
+    } else {
+        flag = 3;
     }
 
 }, 500);
