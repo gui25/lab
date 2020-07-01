@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgBackground</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"> 
+    <script src="./ImgBackground.js" type="text/javascript"></script>
 
+    <style>
+        body{
+            background-color: #0e0c0c;
+        }
+        ::placeholder {
+        color: #0e0c0c;
+        opacity: 1; /* Firefox */
+        font-weight: 900;
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #0e0c0c;
+        font-weight: 900;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+        color: #0e0c0c;
+        font-weight: 900;
+        }
+    </style>
+
+</head>
+<body>
+    <header style="display: flex;">
+        <input type="text" placeholder="TYPE YOUR HEXADECIMAL COLOR" id="myInput" style="width: 100%; background-color: #ccc; border-color: black; font: #0e0c0c;">
+        <input type="text" placeholder="TYPE THE URL OF YOUR .PNG OR SOME IMAGE." id="myInputt" style="width: 100%; background-color: #ccc; border-color: black;">
+        <button type="button" onclick="getInputValue();" style="background-color: rgb(179, 179, 179); border-color: black;font-weight: bold;">Change Background</button>
+    </header>
+    <p style="width: 100%; border-color: black; font-weight: bold; color: #ccc;">EXAMPLE (   #0aF0FF   |    https://pngimg.com/uploads/simpsons/simpsons_PNG63.png   )</p>
+
+<script>
+//let cor = "#5555ff"
+//let f = " url('"
+//let url = "https://pluspng.com/img-png/wide-tree-png-tree-png-image-free-download-picture-tree-png-image-free-download-image-912.png";
+//let ff = "')"
+//let end = "no-repeat"
+function insertvalue(cor, url){
+ 
+    let valor = cor +  " url('" + url +  "') " + "no-repeat";
+
+    document.body.style.background = valor;
+}
+
+function getInputValue(){
+            var inputVal = document.getElementById("myInput").value;
+            var inputVall = document.getElementById("myInputt").value;
+            
+
+            let valor = inputVal +  " url('" + inputVall +  "') " + "no-repeat";
+
+            document.body.style.background = valor;
+}
+
+</script>
+
+</body>
+</html>
