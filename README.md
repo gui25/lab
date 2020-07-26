@@ -4,7 +4,8 @@
 
 [Json JS](https://gui25.github.io/lab/jsonjs/) 🤖 **(Json data manipulate with JS.)**
 
-[Heart](https://gui25.github.io/lab/heart/) ❤️ **(One click to start, two to stop.)**
+
+[Take Another page](https://gui25.github.io/lab/takepage/) 📋✂️ **(You can take another page to your own.)**
 
 [Snake Game](https://gui25.github.io/lab/sneakgame/) 🐍 **(Simple Snake Game.)**      **(Only on PC)**
 
@@ -18,6 +19,6 @@
 
 [Distorted Waves](https://gui25.github.io/lab/wave/) 🌊 **(Crazy distorted green wave.)**
 
-[Take Another page](https://gui25.github.io/lab/takepage/) 📋✂️ **(You can take another page to your own.)**
+[Heart](https://gui25.github.io/lab/heart/) ❤️ **(One click to start, two to stop.)**
 
 Source to [https://github.com/gui25/lab/](https://github.com/gui25/lab/)
