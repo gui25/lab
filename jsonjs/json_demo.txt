@@ -1,5 +1,5 @@
 ﻿{
-    "NameEscola":"Escola Hero",
+    "NameEscola":"Escola Big Heroes",
     "Description":"The best school of the world",
     "Professores":[
         { "id":1, "name":"Matheus", "age":33,"bio":"Matematica" },

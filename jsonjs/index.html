@@ -1,5 +1,23 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+        body{
+            background-color: #cccccc;
+        }
+        h1{
+            font-size: 3rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+            font-size: 1.4rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
 <p id="EscolaName"></p>
 
@@ -15,7 +33,7 @@ xmlhttp.onreadystatechange = function() {
 
                 var Nome = 
                                 "<hr/>" +
-                                "<h1>Escola: \n" + "" + myObj.NameEscola + "<h1/>"
+                                "<h1>" + myObj.NameEscola + "<h1/>"
                                 + "<hr/>";
                 console.log(Nome);
                 document.getElementById("EscolaName").innerHTML = Nome;
@@ -29,8 +47,8 @@ xmlhttp.onreadystatechange = function() {
                             var Membros = myObj.Professores[i];
 
                             var Membro = 
-                                "<hr/>" +
-                                "| Id: " + Membros.id
+                                "<hr/>" //+
+                                // "| Id: " + Membros.id
                                 + " | Nome: " + Membros.name
                                 + " | Idade: " + Membros.age
                                 + " | Materia: " + Membros.bio 
