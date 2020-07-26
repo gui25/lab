@@ -1,9 +1,9 @@
 ﻿{
-    "name":"John",
-    "age":31,
-    "pets":[
-        { "animal":"dog", "name":"Fido" },
-        { "animal":"cat", "name":"Felix" },
-        { "animal":"hamster", "name":"Lightning" }
+    "TeamName":"Imortals",
+    "Description":"The best team of the world",
+    "Members":[
+        { "name":"zeus", "age":8000,"bio":"Im eletric." },
+        { "name":"Hera", "age":80,"bio":"Powerful with the nature." },
+        { "name":"hydra", "age":45,"bio":"Wather make me stronger." }
     ]
 }
