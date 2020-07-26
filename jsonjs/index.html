@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html>
 <body>
+<p id="EscolaName"></p>
 
-<h2>Use the XMLHttpRequest to get the content of a file.</h2>
-<p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
-
-<p id="TeamName"></p>
-<p id="demo"></p>
 <script>
+
 var xmlhttp = new XMLHttpRequest();
+
 xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    document.getElementById("TeamName").innerHTML = myObj.TeamName;
-    if(myObj.Members.id === 1){
-        document.getElementById("demo").innerHTML = myObj.Members;  
-    }
-  }
+
+    if (this.readyState == 4 && this.status == 200) {
+
+        var myObj = JSON.parse(this.responseText);
+
+                var Nome = 
+                                "<hr/>" +
+                                "<h1>Escola: \n" + "" + myObj.NameEscola + "<h1/>"
+                                + "<hr/>";
+                console.log(Nome);
+                PN = document.createElement("P");
+                PN.innerHTML = Nome;
+                document.getElementById("EscolaName").innerHTML = Nome;
+                
+
+
+                    for (var i = 0; i < myObj.Members.length; i++) {
+                        
+
+                        for(i in myObj.Members) {
+                            var Membros = myObj.Members[i];
+
+                            var Membro = 
+                                "<hr/>" +
+                                "| Id: " + Membros.id
+                                + " | Nome: " + Membros.name
+                                + " | Idade: " + Membros.age
+                                + " | Materia: " + Membros.bio 
+                                + " |" 
+                                + "<hr/>";
+
+                            console.log(Membro);
+                            PMembros = document.createElement("P");
+                            PMembros.innerHTML = Membro;
+                            document.body.appendChild(PMembros);
+                        
+                            
+                            
+                        }
+
+                    };
+        
+            
+        }
+    
 };
 xmlhttp.open("GET", "./json_demo.txt", true);
 xmlhttp.send();
 </script>
-
-<p>Take a look at <a href="./json_demo.txt" target="_blank">json_demo.txt</a></p>
 
 </body>
 </html>

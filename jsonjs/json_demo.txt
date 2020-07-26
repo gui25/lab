@@ -1,9 +1,9 @@
 ﻿{
-    "TeamName":"Imortals",
-    "Description":"The best team of the world",
-    "Members":[
-        { "id":1, "name":"zeus", "age":8000,"bio":"Im eletric." },
-        { "id":2, "name":"Hera", "age":80,"bio":"Powerful with the nature." },
-        { "id":3, "name":"hydra", "age":45,"bio":"Wather make me stronger." }
+    "NameEscola":"Escola Hero",
+    "Description":"The best school of the world",
+    "Professores":[
+        { "id":1, "name":"Matheus", "age":33,"bio":"Matematica" },
+        { "id":2, "name":"Iara", "age":26,"bio":"Historia" },
+        { "id":3, "name":"Luan", "age":39,"bio":"Quimica" }
     ]
 }
