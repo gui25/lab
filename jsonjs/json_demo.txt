@@ -10,6 +10,6 @@
         { "id":6, "name":"Julia", "age":35,"bio":"Fisica" },
         { "id":7, "name":"Vitoria", "age":23,"bio":"Biologia" },
         { "id":8, "name":"Tiago", "age":28,"bio":"Artes" },
-        { "id":9, "name":"Kelvin", "age":30,"bio":"Inglês" },
+        { "id":9, "name":"Kelvin", "age":30,"bio":"Inglês" }
     ]
 }
