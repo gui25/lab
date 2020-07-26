@@ -13,7 +13,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
     document.getElementById("TeamName").innerHTML = myObj.TeamName;
-    document.getElementById("TeamName").innerHTML = myObj.Members;
+    document.getElementById("demo").innerHTML = myObj.Members;
   }
 };
 xmlhttp.open("GET", "./json_demo.txt", true);
