@@ -18,17 +18,15 @@ xmlhttp.onreadystatechange = function() {
                                 "<h1>Escola: \n" + "" + myObj.NameEscola + "<h1/>"
                                 + "<hr/>";
                 console.log(Nome);
-                PN = document.createElement("P");
-                PN.innerHTML = Nome;
                 document.getElementById("EscolaName").innerHTML = Nome;
                 
 
 
-                    for (var i = 0; i < myObj.Members.length; i++) {
+                    for (var i = 0; i < myObj.Professores.length; i++) {
                         
 
-                        for(i in myObj.Members) {
-                            var Membros = myObj.Members[i];
+                        for(i in myObj.Professores) {
+                            var Membros = myObj.Professores[i];
 
                             var Membro = 
                                 "<hr/>" +
