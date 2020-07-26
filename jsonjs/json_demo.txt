@@ -4,6 +4,12 @@
     "Professores":[
         { "id":1, "name":"Matheus", "age":33,"bio":"Matematica" },
         { "id":2, "name":"Iara", "age":26,"bio":"Historia" },
-        { "id":3, "name":"Luan", "age":39,"bio":"Quimica" }
+        { "id":3, "name":"Luan", "age":39,"bio":"Quimica" },
+        { "id":4, "name":"Pedro", "age":31,"bio":"Literatura" },
+        { "id":5, "name":"Carlos", "age":29,"bio":"Filosofia" },
+        { "id":6, "name":"Julia", "age":35,"bio":"Fisica" },
+        { "id":7, "name":"Vitoria", "age":23,"bio":"Biologia" },
+        { "id":8, "name":"Tiago", "age":28,"bio":"Artes" },
+        { "id":9, "name":"Kelvin", "age":30,"bio":"Inglês" }.
     ]
 }
