@@ -7,7 +7,7 @@
 
 [Take Another page](https://gui25.github.io/lab/takepage/) 📋✂️ **(You can take another page to your own.)**
 
-[Snake Game](https://gui25.github.io/lab/sneakgame/) 🐍 **(Simple Snake Game.)**      **(Only on PC)**
+[Snake Game](https://gui25.github.io/lab/snakegame/) 🐍 **(Simple Snake Game.)**      **(Only on PC)**
 
 [Favicon Changer](https://gui25.github.io/lab/faviconchanger/) 👨🏼‍💻 **(You can click in some emoji or input your own url .png favicon.)**
 
