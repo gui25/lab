@@ -9,9 +9,21 @@
         body{
             background-color:#312e2e;
         }
+
+        .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        }
+
+        .box div {
+        width: 100px;
+        height: 100px;
+        }
+
         #botao{
             display:flex;
-            align-items: center;
             justify-content: center;
             font-size: 18px;
             padding: 10px;
@@ -28,7 +40,6 @@
 
         }
         #botao:disabled{
-            position: absolute;
             bottom: 8px;
             left: 90%;
             font-size: 18px;
@@ -70,7 +81,14 @@
     </style>
 </head>
 <body>
-    <a type="button" class="button" id="botao" >Start</a>
+    <div class="box" id="box">
+        
+        <div id="lowerbox">
+            <a type="button" class="button" id="botao" >Start</a>
+        </div>
+      
+    </div>
+    
     <p id="scoree"></p>
     <p id="recorde"></p>
     <center><canvas id="stage" width="600" height="600"></canvas></center>
@@ -88,10 +106,13 @@
             starts = new Audio('startt.mp3');
             starts.play();
             btn.style.display = 'none';
+            box.style.display = 'none';
+            lowerbox.style.display = 'none';
             flag=1;
             }
             flag2=0;
             vel = 1;
+            colorfood = "#FF0000";
             vx = vy = 0;
             px =10;
             py = 15;
@@ -130,9 +151,13 @@
  
                 ctx.fillStyle = "black";
                 ctx.fillRect(0,0, stage.width, stage.height);
- 
-                ctx.fillStyle = "red";
+                
+    
+         
+                ctx.fillStyle = colorfood;
                 ctx.fillRect(ax*tp, ay*tp, tp,tp);
+
+                
                 start();
                 }
                 trail.push({x:px,y:py })
@@ -146,6 +171,18 @@
                     score++;
                     document.getElementById("scoree").innerHTML = "Score:" + score;
                     tail++;
+                    num = parseInt(Math.random()*3+1);
+                    switch(num){
+                        case 1:
+                            colorfood = "#FF0000"
+                        break;
+                        case 2:
+                            colorfood = "#461DFF "
+                        break;
+                        case 3:
+                            colorfood = "#CC1DFF"
+                        break;
+                    }
                     ax = Math.floor(Math.random()*qp);
                     ay = Math.floor(Math.random()*qp);
                 }
@@ -156,31 +193,113 @@
                 for (var i = 0; i < trail.length; i++) {
                     lastp = trail.length;
                     if(i!=trail.length){
-                    if(i>=0 && i<=10){
-                    ctx.fillStyle = "green";
-                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    if(i>=0 && i<=9){
+                        num = parseInt(Math.random()*3+1);
+                        switch(num){
+                            case 1:
+                                cor = "#229954"
+                            break;
+                            case 2:
+                                cor = "#27AE60 "
+                            break;
+                            case 3:
+                                cor = "#1E8449"
+                            break;
+                        }
+                        ctx.fillStyle = cor;
+                        ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                                
+                        
                     }
-                    if(i>=11 && i<=20){
-                    ctx.fillStyle = "purple";
-                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    if(i>9 && i<=14){
+                        num = parseInt(Math.random()*3+1);
+                        switch(num){
+                            case 1:
+                                cor = "#21618C"
+                            break;
+                            case 2:
+                                cor = "#2E86C1  "
+                            break;
+                            case 3:
+                                cor = "#3498DB"
+                            break;
+                        }
+                        ctx.fillStyle = cor;
+                        ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    
                     }
-                    if(i>=21 && i<=30){
-                    ctx.fillStyle = "blue";
-                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    if(i>14 && i<=18){
+                        num = parseInt(Math.random()*3+1);
+                        switch(num){
+                            case 1:
+                                cor = "#21618C"
+                            break;
+                            case 2:
+                                cor = "#2E86C1  "
+                            break;
+                            case 3:
+                                cor = "#3498DB"
+                            break;
+                        }
+                        ctx.fillStyle = cor;
+                        ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    
                     }
-                    if(i>=31 && i<=40){
-                    ctx.fillStyle = "orange";
-                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
-                    } 
-                    if(i>=41){
+                    if(i>18 && i<=40){
+                        num = parseInt(Math.random()*3+1);
+                        switch(num){
+                            case 1:
+                                cor = "#EB984E"
+                            break;
+                            case 2:
+                                cor = "#E67E22"
+                            break;
+                            case 3:
+                                cor = "#F0851A"
+                            break;
+                        }
+                        ctx.fillStyle = cor;
+                        ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                    
+                    }
+                    
+                    if(i>40){
+                    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
                     ctx.fillStyle = "white";
                     ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);   
                     }
 
                     }
                     if(i==trail.length-1){
-                    ctx.fillStyle = "yellow";
-                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                        if(localStorage.recorde > 20){
+                            num = parseInt(Math.random()*3+1);
+                            switch(num){
+                                case 1:
+                                    cor = "#BBB120"
+                                    ctx.fillStyle = cor;
+                                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+
+                                break;
+                                case 2:
+                                    cor = "#FFF000"
+                                    ctx.fillStyle = cor;
+                                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+
+                                break;
+                                case 3:
+                                    cor = "#F1C40F"
+                                    ctx.fillStyle = cor;
+                                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+
+
+                                break;
+                            }
+                            
+                        } else {
+                            ctx.fillStyle = "yellow";
+                            ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
+                        }
+                        
                     }
                     if (trail[i].x == px && trail[i].y == py)
                     {
@@ -251,11 +370,14 @@
                 score= score-score;
                 document.getElementById("scoree").innerHTML = "Score:" + score;
                 document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
+                
                 } else {
                     gameover.pause();
                 }
                 n1++;
             }
+
+
             
 
  
