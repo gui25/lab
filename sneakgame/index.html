@@ -221,7 +221,8 @@
             score=0;
             lastkey=0;
             localStorage.recorde =0;
-
+            twotry = 1;
+            lastcolor = '';
             gameover = new Audio('gameover.mp3');
             
             
@@ -251,6 +252,16 @@
          
                 ctx.fillStyle = colorfood;
                 ctx.fillRect(ax*tp, ay*tp, tp,tp);
+
+
+         
+                // ctx.strokeStyle = "red";
+                // ctx.moveTo(300, 0);
+                // ctx.lineTo(300, 600);
+                // ctx.stroke();
+
+
+
 
                 
                 start();
@@ -340,7 +351,7 @@
                         ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
                     
                     }
-                    if(i>18 && i<=40){
+                    if(i>18 && i<=27){
                         num = parseInt(Math.random()*3+1);
                         switch(num){
                             case 1:
@@ -357,11 +368,19 @@
                         ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);
                     
                     }
+
+
                     
-                    if(i>40){
-                    cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                    ctx.fillStyle = "white";
-                    ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);   
+                    if(i>27){
+                        if(twotry%2 == 1){
+                            cor = makeColor();
+                            ctx.fillStyle = cor;
+                            ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);   
+                            lastcolor = cor;
+                        } else {
+                            ctx.fillStyle = lastcolor;
+                            ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1);  
+                        }        
                     }
 
                     }
@@ -403,6 +422,19 @@
                         tail =5; //corpo vira 5 pos
                         if(score!=0){
                         flag2=1;
+                        ctx.font = "30px Verdana";
+                        var gradient = ctx.createLinearGradient(0, 0, stage.width, 0);
+                        gradient.addColorStop("0"," magenta");
+                        gradient.addColorStop("0.5", "blue");
+                        gradient.addColorStop("1.0", "#4615ce");
+                        ctx.fillStyle = gradient;
+
+                        ctx.font = "60px Arial";
+                        ctx.textAlign = "center";
+
+                        ctx.fillText("You Lose!", 300, 240);
+                        ctx.fillText("Try again 😢", 300, 380);
+                        gameover.play();
                         gameovers(n1);
                         }
                     }
@@ -459,15 +491,22 @@
                 if(score>localStorage.recorde){
                 localStorage.recorde = Number(score);
                 }
-                gameover.play();
                 score= score-score;
                 document.getElementById("scoree").innerHTML = "Score:" + score;
                 document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
-                
-                } else {
-                    gameover.pause();
+
                 }
-                n1++;
+                var delay=1300; 
+                setTimeout(function(){
+                    gameover.pause();
+                    n1++;
+                },delay);
+                n1 = 0;
+            }
+
+            function makeColor(){
+                color = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                return color;
             }
 
 
