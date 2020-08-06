@@ -6,92 +6,182 @@
             <meta charset=UTF-8/>
             <title> Guilherme </title>
     <style>
-        body{
-            background-color:#312e2e;
+        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
+        :root {
+        --text-color: hsla(210, 50%, 85%, 1);
+        --shadow-color: hsla(210, 40%, 52%, .4);
+        --btn-color: hsl(246, 79%, 54%);
+        --bg-color: hsl(252, 12%, 8%);
         }
 
-        .box {
+        * {
+        box-sizing: border-box;
+        }
+
+        html, body {
+        width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-
+        background-color: var(--bg-color);
+        position: fixed;
         }
 
-        .box div {
-        width: 100px;
-        height: 100px;
+        button {
+        position:relative;
+        
+        padding: 10px 20px;  
+        border: none;
+        background: none;
+        cursor: pointer;
+        
+        font-family: "Source Code Pro";
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 30px;  
+        color: var(--text-color);
+        
+        background-color: var(--btn-color);
+        box-shadow: var(--shadow-color) 2px 2px 22px;
+        border-radius: 4px; 
+        z-index: 0;  
+        overflow: hidden;   
         }
 
-        #botao{
-            display:flex;
-            justify-content: center;
-            font-size: 18px;
-            padding: 10px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #fff;
-            background-color: #696969;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 3px #000000;
-            
-
+        button:focus {
+        outline-color: transparent;
+        box-shadow: var(--btn-color) 2px 2px 22px;
         }
-        #botao:disabled{
-            bottom: 8px;
-            left: 90%;
-            font-size: 18px;
-            padding: 5px 10px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;color: #fff;
-            background-color: #696969;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 3px #000000;
-            opacity:0;
 
+        .right::after, button::after {
+        content: var(--content);
+        display: block;
+        position: absolute;
+        white-space: nowrap;
+        padding: 40px 40px;
+        pointer-events:none;
         }
+
+        button::after{
+        font-weight: 200;
+        top: -30px;
+        left: -20px;
+        } 
+
+        .right, .left {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        }
+        .right {
+        left: 66%;
+        }
+        .left {
+        right: 66%;
+        }
+        .right::after {
+        top: -30px;
+        left: calc(-66% - 20px);
+        
+        background-color: var(--bg-color);
+        color:transparent;
+        transition: transform .4s ease-out;
+        transform: translate(0, -90%) rotate(0deg)
+        }
+
+        button:hover .right::after {
+        transform: translate(0, -47%) rotate(0deg)
+        }
+
+        button .right:hover::after {
+        transform: translate(0, -50%) rotate(-7deg)
+        }
+
+        button .left:hover ~ .right::after {
+        transform: translate(0, -50%) rotate(7deg)
+        }
+
+        /* bubbles */
+        button::before {
+        content: '';
+        pointer-events: none;
+        opacity: .6;
+        background:
+            radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+            radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+            radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+        width: 100%;
+        height: 300%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        animation: bubbles 5s linear infinite both;
+        }
+
+        @keyframes bubbles {
+        from {
+            transform: translate();
+        }
+        to {
+            transform: translate(0, -66.666%);
+        }
+        }
+
+
+
+
         #scoree{
             position: absolute;
             height: 40px;
-            left: 90%;
+            top: 5%;
+            left: 80%;
+            border: groove;
+            border-radius: 1px;
             font-size: 30px;
             cursor: pointer;
             outline: none;
             color: #fff;
-            background-color:  #000000;
+            background-color:  hsla(239, 79%, 13%, 0.096);
+            display: none;
 
         }
         #recorde{
             position: absolute;
             height: 40px;
+            top: 5%;
             left: 5%;
+            border: ridge;
+            border-radius: 1px;
             font-size: 30px;
             cursor: pointer;
             outline: none;
             color: #fff;
-            background-color:  #000000;
+            background-color:  hsla(239, 79%, 13%, 0.096);
+            display: none;
+        }
 
+        #stage {
+            display: none;
         }
     
     </style>
 </head>
 <body>
-    <div class="box" id="box">
-        
-        <div id="lowerbox">
-            <a type="button" class="button" id="botao" >Start</a>
-        </div>
-      
-    </div>
+
+            <button style="--content: 'Click to Start';" id="botao">
+                <div class="left"></div>
+                  Click to Start
+                <div class="right"></div>
+            </button>
+
     
     <p id="scoree"></p>
     <p id="recorde"></p>
-    <center><canvas id="stage" width="600" height="600"></canvas></center>
+    <canvas id="stage" width="600" height="600"></canvas>
     <script type="text/javascript">
        
         window.onload = function(){
@@ -106,8 +196,13 @@
             starts = new Audio('startt.mp3');
             starts.play();
             btn.style.display = 'none';
-            box.style.display = 'none';
-            lowerbox.style.display = 'none';
+            cor = "-webkit-linear-gradient(bottom left, rgb(50, 25, 121) 20px, rgb(57, 30, 100), rgb(84, 30, 100), rgb(67, 81, 211) 90%)";
+            document.body.style.background = cor;
+            document.getElementById('scoree').style.display = 'block';
+            document.getElementById('recorde').style.display = 'block';
+            document.getElementById('stage').style.display = 'block';
+            document.getElementById("scoree").innerHTML = "Score: 0";
+
             flag=1;
             }
             flag2=0;
@@ -364,8 +459,6 @@
                 if(score>localStorage.recorde){
                 localStorage.recorde = Number(score);
                 }
-                cor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                document.body.style.backgroundColor = cor;
                 gameover.play();
                 score= score-score;
                 document.getElementById("scoree").innerHTML = "Score:" + score;
