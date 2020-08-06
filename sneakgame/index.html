@@ -245,6 +245,7 @@
                 if(score>localStorage.recorde){
                 localStorage.recorde = Number(score);
                 }
+                document.body.style.backgroundColor = '#696969';
                 gameover.play();
                 score= score-score;
                 document.getElementById("scoree").innerHTML = "Score:" + score;
