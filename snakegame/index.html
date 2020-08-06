@@ -206,6 +206,8 @@
             flag=1;
             }
             flag2=0;
+            isOver=false;
+            x = 1;
             vel = 1;
             colorfood = "#FF0000";
             vx = vy = 0;
@@ -259,12 +261,32 @@
                 // ctx.moveTo(300, 0);
                 // ctx.lineTo(300, 600);
                 // ctx.stroke();
-
+            
 
 
 
                 
                 start();
+
+                if(x==0){   
+                            isOver = true;
+                            ctx.font = "30px Verdana";
+                            var gradient = ctx.createLinearGradient(0, 0, stage.width, 0);
+                            gradient.addColorStop("0"," magenta");
+                            gradient.addColorStop("0.5", "blue");
+                            gradient.addColorStop("1.0", "#4615ce");
+                            ctx.fillStyle = gradient;
+
+                            ctx.font = "60px Arial";
+                            ctx.textAlign = "center";
+
+                            ctx.fillText("You Lose!", 300, 140);
+                            ctx.fillText("Try again 😢", 300, 260);
+                            ctx.font = "30px Arial";
+                            ctx.fillText("Press your Space bar to continue.", 300, 460);
+                            gameover.play();
+                }
+
                 }
                 trail.push({x:px,y:py })
                 while (trail.length > tail) {
@@ -421,27 +443,22 @@
                         vx = vy=0; //velocidade zera
                         tail =5; //corpo vira 5 pos
                         if(score!=0){
-                        flag2=1;
-                        ctx.font = "30px Verdana";
-                        var gradient = ctx.createLinearGradient(0, 0, stage.width, 0);
-                        gradient.addColorStop("0"," magenta");
-                        gradient.addColorStop("0.5", "blue");
-                        gradient.addColorStop("1.0", "#4615ce");
-                        ctx.fillStyle = gradient;
-
-                        ctx.font = "60px Arial";
-                        ctx.textAlign = "center";
-
-                        ctx.fillText("You Lose!", 300, 240);
-                        ctx.fillText("Try again 😢", 300, 380);
-                        gameover.play();
-                        gameovers(n1);
+                        x = 0;
+                        gameovers();
                         }
                     }
                 }
                 }
             function keyPush(event){
-
+                if(isOver==true){
+                    switch (event.keyCode) {
+                        case 32:
+                            x = 1;
+                            isOver=false; 
+                            gameover.pause();
+                        break;
+                    }
+                } else {
                 switch (event.keyCode) {
                     case 37:
                     case 65: // Left
@@ -483,6 +500,7 @@
                        
                         break;
                 }
+            }
  
  
             }
@@ -498,7 +516,6 @@
                 }
                 var delay=1300; 
                 setTimeout(function(){
-                    gameover.pause();
                     n1++;
                 },delay);
                 n1 = 0;
