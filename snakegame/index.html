@@ -454,8 +454,9 @@
                     switch (event.keyCode) {
                         case 32:
                             x = 1;
-                            isOver=false; 
                             gameover.pause();
+                            isOver=false; 
+                            
                         break;
                     }
                 } else {
@@ -507,18 +508,16 @@
             function gameovers(){
                 if(n1>0){
                 if(score>localStorage.recorde){
-                localStorage.recorde = Number(score);
+                    localStorage.recorde = Number(score);
                 }
                 score= score-score;
                 document.getElementById("scoree").innerHTML = "Score:" + score;
                 document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
 
-                }
-                var delay=1300; 
-                setTimeout(function(){
-                    n1++;
-                },delay);
                 n1 = 0;
+                }
+                n1++;
+
             }
 
             function makeColor(){
