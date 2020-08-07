@@ -217,7 +217,6 @@
             qp = 20;
             ax=ay=15;
             trail = [];
-            n1 = 0;
             tail = 5;
             lost=0;
             score=0;
@@ -506,7 +505,7 @@
  
             }
             function gameovers(){
-                if(n1>0){
+
                 if(score>localStorage.recorde){
                     localStorage.recorde = Number(score);
                 }
@@ -514,9 +513,7 @@
                 document.getElementById("scoree").innerHTML = "Score:" + score;
                 document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
 
-                n1 = 0;
-                }
-                n1++;
+
 
             }
 
