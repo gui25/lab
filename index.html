@@ -36,13 +36,29 @@
       color: #ffffff;
       background-color: #080808;
     }
+
+    .box{
+      display: -ms-flexbox !important;
+      display: -webkit-flex !important;
+      display: flex !important;
+      
+      -webkit-justify-content: center;
+      justify-content: center;
+    }
+
+    .box div{
+      flex: 0 1 auto;
+      align-self: auto;
+    }
   </style>
 </head>
 
 <body>
   <div class="container-lg px-3 my-5 markdown-body">
-
-    <h1 id="experimentos" class="flex-md-items-center">My experiments</h1>
+    <div class="box">
+      <h1>My experiments</h1>
+    </div>
+    
 
     <p><a href="https://gui25.github.io/lab/">gui25.github.io/lab/</a> 🚀 <strong>(list of everything.)</strong></p>
 
