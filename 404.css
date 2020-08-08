@@ -1,0 +1,205 @@
+@import "compass/css3";
+html, body {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Varela', sans-serif;
+  background: -webkit-linear-gradient(bottom left, rgb(50, 25, 121) 20px, rgb(57, 30, 100), rgb(84, 30, 100), rgb(67, 81, 211) 90%);
+}
+.glitch {
+  color: #e6e4e4;
+  font-size: 100px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+@keyframes noise-anim {
+  0% {
+    clip: rect(44px, 9999px, 34px, 0);
+  }
+  5% {
+    clip: rect(96px, 9999px, 27px, 0);
+  }
+  10% {
+    clip: rect(76px, 9999px, 89px, 0);
+  }
+  15% {
+    clip: rect(88px, 9999px, 32px, 0);
+  }
+  20% {
+    clip: rect(29px, 9999px, 95px, 0);
+  }
+  25% {
+    clip: rect(73px, 9999px, 96px, 0);
+  }
+  30% {
+    clip: rect(60px, 9999px, 45px, 0);
+  }
+  35% {
+    clip: rect(4px, 9999px, 5px, 0);
+  }
+  40% {
+    clip: rect(22px, 9999px, 58px, 0);
+  }
+  45% {
+    clip: rect(5px, 9999px, 66px, 0);
+  }
+  50% {
+    clip: rect(32px, 9999px, 26px, 0);
+  }
+  55% {
+    clip: rect(99px, 9999px, 92px, 0);
+  }
+  60% {
+    clip: rect(42px, 9999px, 76px, 0);
+  }
+  65% {
+    clip: rect(78px, 9999px, 21px, 0);
+  }
+  70% {
+    clip: rect(58px, 9999px, 80px, 0);
+  }
+  75% {
+    clip: rect(60px, 9999px, 34px, 0);
+  }
+  80% {
+    clip: rect(29px, 9999px, 59px, 0);
+  }
+  85% {
+    clip: rect(61px, 9999px, 19px, 0);
+  }
+  90% {
+    clip: rect(16px, 9999px, 30px, 0);
+  }
+  95% {
+    clip: rect(76px, 9999px, 78px, 0);
+  }
+  100% {
+    clip: rect(15px, 9999px, 36px, 0);
+  }
+}
+.glitch:after {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: 10px 0 magenta;
+  top: 0;
+  color: #e6e4e4;
+  background: -webkit-linear-gradient(bottom left, rgb(50, 25, 121) 20px, rgb(57, 30, 100), rgb(84, 30, 100), rgb(67, 81, 211) 90%);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(2px, 9999px, 31px, 0);
+  }
+  5% {
+    clip: rect(80px, 9999px, 23px, 0);
+  }
+  10% {
+    clip: rect(59px, 9999px, 97px, 0);
+  }
+  15% {
+    clip: rect(72px, 9999px, 16px, 0);
+  }
+  20% {
+    clip: rect(72px, 9999px, 53px, 0);
+  }
+  25% {
+    clip: rect(21px, 9999px, 35px, 0);
+  }
+  30% {
+    clip: rect(17px, 9999px, 56px, 0);
+  }
+  35% {
+    clip: rect(39px, 9999px, 16px, 0);
+  }
+  40% {
+    clip: rect(94px, 9999px, 63px, 0);
+  }
+  45% {
+    clip: rect(34px, 9999px, 18px, 0);
+  }
+  50% {
+    clip: rect(71px, 9999px, 51px, 0);
+  }
+  55% {
+    clip: rect(52px, 9999px, 49px, 0);
+  }
+  60% {
+    clip: rect(57px, 9999px, 74px, 0);
+  }
+  65% {
+    clip: rect(68px, 9999px, 99px, 0);
+  }
+  70% {
+    clip: rect(99px, 9999px, 23px, 0);
+  }
+  75% {
+    clip: rect(84px, 9999px, 89px, 0);
+  }
+  80% {
+    clip: rect(93px, 9999px, 23px, 0);
+  }
+  85% {
+    clip: rect(73px, 9999px, 16px, 0);
+  }
+  90% {
+    clip: rect(83px, 9999px, 70px, 0);
+  }
+  95% {
+    clip: rect(98px, 9999px, 64px, 0);
+  }
+  100% {
+    clip: rect(17px, 9999px, 54px, 0);
+  }
+}
+.glitch:before {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: #e6e4e4;
+  background: -webkit-linear-gradient(bottom left, rgb(50, 25, 121) 20px, rgb(57, 30, 100), rgb(84, 30, 100), rgb(67, 81, 211) 90%);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+
+
+#container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media(w < 1100){
+
+}
+
