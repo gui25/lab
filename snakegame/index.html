@@ -213,7 +213,7 @@
                 document.getElementById('scoree').style.display = 'block';
                 document.getElementById('recorde').style.display = 'block';
                 document.getElementById('stage').style.display = 'block';
-                document.getElementById("scoree").innerHTML = "Score: 0";
+                document.getElementById("scoree").innerHTML = "Current Score: 0";
 
                 flag = 1;
             }
@@ -311,7 +311,7 @@
                     var coinad = new Audio('coin.mp3');
                     coinad.play();
                     score++;
-                    document.getElementById("scoree").innerHTML = "Score:" + score;
+                    document.getElementById("scoree").innerHTML = "Current Score:" + score;
                     tail++;
                     num = parseInt(Math.random() * 3 + 1);
                     switch (num) {
@@ -528,7 +528,7 @@
                     localStorage.recorde = Number(score);
                 }
                 score = score - score;
-                document.getElementById("scoree").innerHTML = "Score:" + score;
+                document.getElementById("scoree").innerHTML = "Current Score:" + score;
                 document.getElementById("recorde").innerHTML = "Best Score: " + localStorage.recorde;
 
 
