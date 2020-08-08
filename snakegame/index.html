@@ -143,10 +143,10 @@
 
 
         #scoree {
-            position: absolute;
+            position: fixed;
             height: 40px;
             top: 5%;
-            left: 80%;
+            right: 0;
             border: groove;
             border-radius: 1px;
             font-size: 30px;
@@ -159,10 +159,10 @@
         }
 
         #recorde {
-            position: absolute;
+            position: fixed;
             height: 40px;
             top: 5%;
-            left: 5%;
+            left: 0%;
             border: ridge;
             border-radius: 1px;
             font-size: 30px;
@@ -173,9 +173,10 @@
             display: none;
         }
 
-        #stage {
-            display: none;
+        #stage{
+            position: fixed;
         }
+        
     </style>
 </head>
 
@@ -193,6 +194,7 @@
     <canvas id="stage" width="600" height="600"></canvas>
     <script type="text/javascript">
         window.onload = function () {
+            document.getElementById('stage').style.display = 'none';
             var stage = document.getElementById('stage');
             var ctx = stage.getContext("2d");
             document.addEventListener("keydown", keyPush);
