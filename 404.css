@@ -6,7 +6,7 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: 'Varela', sans-serif;
-  background: -webkit-linear-gradient(bottom left, rgb(50, 25, 121) 20px, rgb(57, 30, 100), rgb(84, 30, 100), rgb(67, 81, 211) 90%);
+  background-color: black;
 }
 .glitch {
   color: #e6e4e4;
@@ -99,7 +99,7 @@ html, body {
   text-shadow: 10px 0 magenta;
   top: 0;
   color: #e6e4e4;
-  background: -webkit-linear-gradient(bottom left, rgb(50, 25, 121) 20px, rgb(57, 30, 100), rgb(84, 30, 100), rgb(67, 81, 211) 90%);
+  background-color: black;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 2s infinite linear alternate-reverse;
@@ -182,7 +182,7 @@ html, body {
   text-shadow: 1px 0 blue;
   top: 0;
   color: #e6e4e4;
-  background: -webkit-linear-gradient(bottom left, rgb(50, 25, 121) 20px, rgb(57, 30, 100), rgb(84, 30, 100), rgb(67, 81, 211) 90%);
+  background-color: black;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
