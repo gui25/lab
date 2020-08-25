@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="index.css" rel="stylesheet">
+<title>Wire-Tube Three.js</title>
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no" data-gr-c-s-loaded="true">
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+<script id="rendered-js">
+window.addEventListener("load", init);
+
+function init() {
+
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    const renderer = new THREE.WebGLRenderer();
+    document.body.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+    camera.position.z = 500;
+
+    const points = [
+    [60, 180], [120, 240], [180, 300], [280, 180], [180, 120], [60, 60], [60, 180]];
+
+    for (let i = 0; i < points.length; i++) {
+        const x = points[i][0];
+        const y = points[i][0];
+        const z = points[i][1];
+        points[i] = new THREE.Vector3(x, y, z);
+    }
+
+    const path = new THREE.CatmullRomCurve3(points);
+
+    const geometry = new THREE.TubeGeometry(path, 100, 3, 5, true);
+
+    const material = new THREE.MeshLambertMaterial({
+        color: 0xa6ff00,
+        wireframe: true });
+
+
+
+    const mesh = new THREE.Mesh(geometry, material);
+    const ambient = new THREE.AmbientLight();
+    scene.add(mesh, ambient);
+
+    let percentage = 0;
+    function render() {
+        percentage += 0.00100;
+        const p1 = path.getPointAt(percentage % 1);
+        const p2 = path.getPointAt((percentage + 0.100) % 1);
+        camera.position.set(p1.x, p1.y, p1.z);
+        camera.lookAt(p2);
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+    }
+
+    render();
+
+    window.addEventListener("resize", onResize);
+
+    function onResize() {
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    }
+
+    onResize();
+    }
+
+</script>
+
+
+</body>
+</html>
