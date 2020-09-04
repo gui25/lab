@@ -2,7 +2,7 @@
 
 [gui25.github.io/lab/](https://gui25.github.io/lab/) 🚀 **(list of everything.)**
 
-
+[Main](https://gui25.github.io/lab/main/)  **(My Main Website.)** 
 
 [Snake Game](https://gui25.github.io/lab/snakegame/) 🐍 **(Simple Snake Game.)**      **(Only on PC)**
 
