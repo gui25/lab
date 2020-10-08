@@ -80,7 +80,7 @@ input[type=number] {
 }
 
 .button:focus {
-    border-color: #00e1ff;
+    border-color: #00e1ffc2;
 }
 
 .input.-type-b.back:focus{
