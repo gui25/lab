@@ -53,9 +53,9 @@ input[type=number] {
 }
 
 .input.-type-b.noback {
-    background-color: rgba(31, 218, 154, 0.1);
-    border-color: rgba(31, 218, 154, 0.3);
-    color: #23cc91;
+    background-color: rgba(31, 218, 209, 0.1);
+    border-color: rgba(31, 206, 218, 0.3);
+    color: #23ccb0;
 }
 
 
@@ -92,7 +92,7 @@ input[type=number] {
 }
 
 .input.-type-b.noback:focus {
-    border-color: rgba(31, 218, 154, 0.5);
+    border-color: rgba(31, 218, 218, 0.5);
 }
 
 @media all and (min-width: 640px) {
