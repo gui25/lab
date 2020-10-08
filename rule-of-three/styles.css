@@ -41,15 +41,15 @@ input[type=number] {
 }
 
 .input.-type-a {
-    background-color: rgba(232, 183, 26, 0.1);
-    border-color: rgba(232, 183, 26, 0.3);
-    color: #c7a021;
+    background-color: rgba(225, 26, 232, 0.1);
+    border-color: rgba(232, 26, 232, 0.3);
+    color: #ab21c7;
 }
 
 .input.-type-b.back {
-    background-color: rgba(232, 183, 26, 0.1);
-    border-color: rgba(232, 183, 26, 0.3);
-    color: #c7a021;
+    background-color: rgba(225, 26, 232, 0.1);
+    border-color: rgba(232, 26, 232, 0.3);
+    color: #ab21c7;
 }
 
 .input.-type-b.noback {
@@ -75,17 +75,20 @@ input[type=number] {
 .button:focus,
 .input:active,
 .input:focus {
-    border-color: #00e1ff;
     box-shadow: none;
     outline: none;
 }
 
+.button:focus {
+    border-color: #00e1ff;
+}
+
 .input.-type-b.back:focus{
-    border-color: rgba(232, 183, 26, 0.5);
+    border-color: rgba(215, 26, 232, 0.637);
 }
 
 .input.-type-a:focus {
-    border-color: rgba(232, 183, 26, 0.5);
+    border-color: rgba(215, 26, 232, 0.637);
 }
 
 .input.-type-b.noback:focus {
