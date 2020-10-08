@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #ffffff;
+    background-color: #474545;
 }
 
 .hidden {
@@ -24,7 +24,7 @@ body {
     height: 40px;
     font-size: 20px;
     padding: 10px 20px;
-    border: 2px solid #dddddd;
+    border: 2px solid #00b7ff;
     display: block;
     width: calc(100% - 40px);
     margin: 0;
@@ -33,18 +33,29 @@ body {
 .input.-type-a {
     background-color: rgba(232, 183, 26, 0.1);
     border-color: rgba(232, 183, 26, 0.3);
-    color: #775e0d;
+    color: #c7a021;
 }
 
-.input.-type-b {
+.input.-type-b.back {
+    background-color: rgba(232, 183, 26, 0.1);
+    border-color: rgba(232, 183, 26, 0.3);
+    color: #c7a021;
+}
+
+.input.-type-b.noback {
     background-color: rgba(31, 218, 154, 0.1);
     border-color: rgba(31, 218, 154, 0.3);
-    color: #0e6647;
+    color: #23cc91;
 }
 
+
+
 .button {
-    background-color: #ffffff;
-    color: #bbbbbb;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(31, 90, 218, 0.1);
+    border-color: rgba(0, 255, 200, 0.3);
+    color: #23cc91;
     height: 60px;
     margin-top: 40px;
     width: 100%;
@@ -54,16 +65,20 @@ body {
 .button:focus,
 .input:active,
 .input:focus {
-    border-color: #bbbbbb;
+    border-color: #00e1ff;
     box-shadow: none;
     outline: none;
+}
+
+.input.-type-b.back:focus{
+    border-color: rgba(232, 183, 26, 0.5);
 }
 
 .input.-type-a:focus {
     border-color: rgba(232, 183, 26, 0.5);
 }
 
-.input.-type-b:focus {
+.input.-type-b.noback:focus {
     border-color: rgba(31, 218, 154, 0.5);
 }
 
