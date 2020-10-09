@@ -1,6 +1,9 @@
-body {
+html, body {
     margin: 0;
-    background-color: #1d1b1b;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-size: 1425px;
+    
 }
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -100,3 +103,4 @@ input[type=number] {
         width: 600px;
     }
 }
+
