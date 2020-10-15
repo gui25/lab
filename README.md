@@ -4,7 +4,11 @@
 
 [Main](https://gui25.github.io/main/) 🚀 **(Main Website.)** 
 
-[Snake Game](https://gui25.github.io/lab/snakegame/) 🐍 **(Simple Snake Game.)**      **(Only on PC)**
+[Snake Game](https://gui25.github.io/lab/snakegame/) 🐍 **(Snake Game)**      **(Only on PC)**
+
+[Text Talk](https://gui25.github.io/lab/text-talk/) 👄 **(Text Talk)** 
+
+[Rule of Three](https://gui25.github.io/lab/rule-of-three/) 🔢 **(Rule of three)** 
 
 [Favicon Changer](https://gui25.github.io/lab/faviconchanger/) 👨🏼‍💻 **(You can click in some emoji or input your own url .png favicon.)**
 
