@@ -1,7 +1,5 @@
 # My Experiments 
 
-[gui25.github.io/lab/](https://gui25.github.io/lab/)  **(list of everything.)**
-
 [Main](https://gui25.github.io/main/) 🚀 **(Main Website.)** 
 
 [Snake Game](https://gui25.github.io/lab/snakegame/) 🐍 **(Snake Game)**      **(Only on PC)**
