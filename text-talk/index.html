@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Talk</title>
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+    <style>
+        body{
+            background-color: #161414;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <header style="display: flex;">
+    <input type="text" placeholder="Escreva o seu texto" id="myInput" style="width: 100%; font-size: 35px; height: 40px; text-align: center; background-color: #ccc; border-color: black;">
+    </header>
+    <button onclick="getInputValue();" type='button'  style=" margin-top: 10px; width: 100%; height: 65px; font-size: 40px; background-color: #ccc; border-color: black;" >🔊 Reproduzir</button>
+    <div style="display: flex; margin-bottom: 10px; margin-top: 10px;" >
+        <button onclick=" sexo = 'Male' " style="width: 100%; font-size: 35px; height: 45px; text-align: center; background-color: #ccc; border-color: black;">
+            Homem
+        </button>
+        <button  onclick=" sexo = 'Female' " style="width: 100%; font-size: 35px; height: 45px; text-align: center; background-color: #ccc; border-color: black;">
+            Mulher
+        </button>
+        
+    </div>
+    <button  onclick=" lingua = 'Brazilian Portuguese' " style="margin-bottom: 5px; width: 100%; font-size: 35px; height: 50px; text-align: center; background-color: #ccc; border-color: black;">
+        Português
+    </button>
+    <button  onclick=" lingua = 'UK English' " style="width: 100%; font-size: 35px; height: 50px; text-align: center; background-color: #ccc; border-color: black;">
+        Inglês
+    </button>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script>
+        lingua = 'Brazilian Portuguese';
+        sexo =   'Male';
+        function getInputValue(){
+            var inputVal = document.getElementById("myInput").value;
+            responsiveVoice.speak(inputVal, lingua + " " + sexo);
+        }
+    </script>
+    </div>
+    </body>
+</html>
