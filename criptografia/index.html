@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+    <title>Cripto</title>
+    <style>
+        body{
+            background-color: #161414;
+        }
+
+        ::placeholder { 
+        color: #141414;
+        opacity: 1; 
+        }
+
+        input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+        }
+        input[type=number] { 
+        -moz-appearance: textfield;
+        appearance: textfield;
+
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-top: 35px;">
+    <header style="display: flex;">
+        <button onclick="criptografe();" type='button'  style=" margin-top: 10px; width: 100%; height: 65px; font-size: 40px; background-color: #ccc; border-color: black;" >Criptografe 🔒</button>
+        <input id="senha" type="number" min="10" placeholder="Digite sua senha numerica"  style=" text-align: center; margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;"/>
+    </header>
+    <input id = "texto" type="text" onkeydown="uniKeyCode(event)" placeholder="Escreva sua mensagem"  style="text-align: center;  margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;">
+    
+    
+    <textarea id="resultadocripto" type="number" min="10"  readonly=“true” style=" margin-top: 10px; width: 100%; height: 100%; font-size: 70px; background-color: #ccc; border-color: black; margin-bottom: 30px;"></textarea>
+    
+    <header style="display: flex;">
+        <button onclick="decriptografe();" type='button'  style=" margin-top: 10px; width: 100%; height: 65px; font-size: 40px; background-color: #ccc; border-color: black;" >Descriptografe 🔒</button>
+        <input id="senhadecript" type="number" min="10" placeholder="Digite sua senha numerica"  style=" text-align: center; margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc !important; border-color: black;" />
+    </header>
+    <input id="textodecript"  min="10" placeholder="Digite seu texto criptografado"  style="text-align: center;  margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;" />
+        
+
+    <textarea id="resultadodecripto" type="text" min="10"  readonly=“true” style=" margin-top: 10px; width: 100%; height: 100%; font-size: 70px; background-color: #ccc; border-color: black;"></textarea>
+    
+    <script>
+        
+
+        var keycodes = [];
+
+        function uniKeyCode(event) {
+        var key = event.keyCode;
+        if(event.which == 8 ){
+            keycodes.pop();
+        } else {
+            keycodes.push(key);
+        }
+   
+        
+
+        }
+
+        
+
+        function criptografe(){
+            var texto = document.getElementById('texto');
+            var senha = document.getElementById('senha');
+
+            pi = 314 + parseInt(senha.value);
+
+            vetorcript = []
+    
+       
+
+            var i = 0;
+            for(i = 0; i < keycodes.length; i++){
+                vetorcript.push(parseInt(keycodes[i]) * pi);
+                
+            }
+
+            document.getElementById('resultadocripto').innerText = vetorcript;
+
+            
+            
+        }
+    
+        function decriptografe(){
+            
+            valorfinal = '';
+            senhadecript = document.getElementById('senhadecript').value;
+            textodecript = document.getElementById('textodecript').value;
+
+            pi = 314 + parseInt(senhadecript);
+            
+            keycodesdecript = textodecript.split(",");
+            vectordecript = [];
+            for(i = 0; i < keycodesdecript.length; i++){
+                vectordecript.push(parseInt(keycodesdecript[i]) / pi);
+                valorfinal = valorfinal + String.fromCharCode(vectordecript[i]);
+            }
+         
+            
+            document.getElementById('resultadodecripto').innerHTML = valorfinal;
+            
+        }
+    
+
+
+    </script>
+    </div>
+    </body>
+</html>
