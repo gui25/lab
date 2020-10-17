@@ -22,26 +22,34 @@
         input[type=number] { 
         -moz-appearance: textfield;
         appearance: textfield;
+ 
+        }
 
+        
+
+        @media only screen and (max-width: 600px) {
+            header {
+                flex-flow:wrap;
+            }
         }
     </style>
 </head>
 <body>
     <div style="margin-top: 35px;">
-    <header style="display: flex; flex-flow: wrap;">
+    <header style="display: flex; ">
         <button onclick="criptografe();" type='button'  style=" margin-top: 10px; width: 100%; height: 65px; font-size: 40px; background-color: #ccc; border-color: black;" >Criptografe 🔒</button>
-        <input id="senha" type="number" min="10" placeholder="Digite sua senha numerica"  style=" text-align: center; margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;"/>
+        <input id="senha" type="number" min="10" placeholder="Digite sua senha numerica"  autocomplete="off" style=" text-align: center; margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc !important; border-color: black;"/>
     </header>
-    <input id = "texto" type="text" onkeydown="uniKeyCode(event)" placeholder="Escreva sua mensagem"  style="text-align: center;  margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;">
+    <input id = "texto" onkeydown="uniKeyCode(event)" placeholder="Escreva sua mensagem"  autocomplete="off" style="text-align: center;  margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;">
     
     
     <textarea id="resultadocripto" type="number" min="10"  readonly=“true” style=" margin-top: 10px; width: 100%; height: 100%; font-size: 70px; background-color: #ccc; border-color: black; margin-bottom: 30px;"></textarea>
     
-    <header style="display: flex; flex-flow: wrap;">
+    <header style="display: flex; ">
         <button onclick="decriptografe();" type='button'  style=" margin-top: 10px; width: 100%; height: 65px; font-size: 40px; background-color: #ccc; border-color: black;" >Descriptografe 🔒</button>
-        <input id="senhadecript" type="number" min="10" placeholder="Digite sua senha numerica"  style=" text-align: center; margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc !important; border-color: black;" />
+        <input id="senhadecript" type="number" autocomplete="off" min="10" placeholder="Digite sua senha numerica"  style=" text-align: center; margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc !important; border-color: black;" />
     </header>
-    <input id="textodecript"  min="10" placeholder="Digite seu texto criptografado"  style="text-align: center;  margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;" />
+    <input id="textodecript"  min="10" autocomplete="off" placeholder="Digite seu texto criptografado"  style="text-align: center;  margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;" />
         
 
     <textarea id="resultadodecripto" type="text" min="10"  readonly=“true” style=" margin-top: 10px; width: 100%; height: 100%; font-size: 70px; background-color: #ccc; border-color: black;"></textarea>
