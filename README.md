@@ -8,7 +8,7 @@
 
 [Rule of Three](https://gui25.github.io/lab/rule-of-three/) 🔢 **(Rule of three)** 
 
-[Cripto](https://gui25.github.io/lab/rule-of-three/) 🔒 **(Cryptography - Password system)**
+[Cripto](https://gui25.github.io/lab/cripto/) 🔒 **(Cryptography - Password system)**
 
 [Favicon Changer](https://gui25.github.io/lab/faviconchanger/) 👨🏼‍💻 **(You can click in some emoji or input your own url .png favicon.)**
 
