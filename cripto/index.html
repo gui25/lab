@@ -141,6 +141,30 @@
         }
     
 
+        function tamanhodatela(){
+
+            var screenWidth = parseInt(screen.width);
+            var screenHeight = parseInt(screen.height);
+            
+            var passvalue = document.getElementById('senha').placeholder;
+            var textvalue = document.getElementById('texto').placeholder;
+
+            if(screenHeight < 750 & screenWidth < 400){
+                document.getElementById('senha').placeholder = 'senha numerica';
+                document.getElementById('texto').placeholder = 'Mensagem';
+
+                document.getElementById('senhadecript').placeholder = 'senha numerica';
+                document.getElementById('textodecript').placeholder = 'Texto criptografado';
+            } 
+
+        };
+
+        tamanhodatela();
+
+        window.addEventListener('resize', function(){
+            tamanhodatela();
+        });
+
 
     </script>
     </div>
