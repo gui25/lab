@@ -65,7 +65,7 @@
         <button onclick="criptografe();" type='button'  style=" margin-top: 10px; width: 100%; height: 65px; font-size: 40px; background-color: #ccc; border-color: black;" >Criptografe 🔒</button>
         <input id="senha" type="number" min="10" placeholder="Digite sua senha numerica"  autocomplete="off" style=" text-align: center; margin-top: 10px; width: 100%; height: 61px; font-size: 40px; background-color: #ccc !important; border-color: black;"/>
     </header>
-    <input id = "texto" onkeydown="uniKeyCode(event)" placeholder="Escreva sua mensagem"  autocomplete="off" style="text-align: center;  margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;">
+    <input id = "texto" onkeydown="uniKeyCode(event)" readonly=“true” placeholder="Escreva sua mensagem"  autocomplete="off" style="text-align: center;  margin-top: 10px; width: 100%; height: 59px; font-size: 40px; background-color: #ccc; border-color: black;">
     
     
     <textarea id="resultadocripto" type="number" min="10"  readonly=“true” style=" margin-top: 10px; width: 100%; height: 100%; font-size: 70px; background-color: #ccc; border-color: black; margin-bottom: 30px;"></textarea>
@@ -92,13 +92,21 @@
             keycodes.push(key);
         }
    
+        valorfinal = "";
         
+        keycodes.forEach(element => {
+            valorfinal = valorfinal + String.fromCharCode(element);
+        });
+
+        document.getElementById('texto').value = valorfinal;
 
         }
 
         
 
         function criptografe(){
+            document.getElementById('resultadocripto').innerText = '';
+
             var texto = document.getElementById('texto');
             var senha = document.getElementById('senha');
 
@@ -121,10 +129,12 @@
         }
     
         function decriptografe(){
-            
+            document.getElementById('resultadodecripto').innerHTML = '';
+
             valorfinal = '';
             senhadecript = document.getElementById('senhadecript').value;
             textodecript = document.getElementById('textodecript').value;
+            
 
             pi = 314 + parseInt(senhadecript);
             
