@@ -122,7 +122,16 @@
                 
             }
 
-            document.getElementById('resultadocripto').innerText = vetorcript;
+       
+    
+            if(isNaN(vetorcript[0])){
+                document.getElementById('resultadocripto').innerText = "Digite uma senha!";
+                
+            } else {
+                document.getElementById('resultadocripto').innerText = vetorcript;
+            }
+
+            
 
             
             
@@ -144,9 +153,16 @@
                 vectordecript.push(parseInt(keycodesdecript[i]) / pi);
                 valorfinal = valorfinal + String.fromCharCode(vectordecript[i]);
             }
+
+            alert(vectordecript[0]);
          
+            if(isNaN(vectordecript[0])){
+                document.getElementById('resultadodecripto').innerText = "Digite um texto criptografado e uma senha.";
+                
+            } else {
+                document.getElementById('resultadodecripto').innerHTML = valorfinal;
+            }
             
-            document.getElementById('resultadodecripto').innerHTML = valorfinal;
             
         }
     
