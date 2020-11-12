@@ -237,6 +237,7 @@
             twotry = 1;
             lastcolor = '';
             gameover = new Audio('gameover.mp3');
+            music = new Audio('music.mp3');
 
 
 
@@ -296,6 +297,26 @@
                         ctx.font = "30px Arial";
                         ctx.fillText("Press your Space bar to continue.", 300, 460);
                         gameover.play();
+                    }
+
+
+                    if (x == -1) {
+
+                        ctx.font = "35px Verdana";
+                        var gradient = ctx.createLinearGradient(0, 0, stage.width, 0);
+                        gradient.addColorStop("0", "#ffcbdb");
+                        gradient.addColorStop("0.5", "#ff6f9c");
+                        gradient.addColorStop("1.0", "#ff266a");
+                        ctx.fillStyle = gradient;
+
+                        ctx.font = "35px Arial";
+                        ctx.textAlign = "center";
+
+                        ctx.fillText("LAILA EU TE AMO <3 TU GANHOU", 300, 140);
+                        ctx.fillText("YOU ARE MY ONLY EXCEPTION", 300, 260);
+                        ctx.font = "33px Arial";
+                        ctx.fillText("THE BEST PLAYER IS YOU MY LOVE!", 300, 460);
+                        
                     }
 
                 }
@@ -465,6 +486,28 @@
             }
 
             function keyPush(event) {
+                
+                
+                if (event.keyCode == 76 || x == -1){
+                    x = -1;
+                    ctx.font = "35px Verdana";
+                        var gradient = ctx.createLinearGradient(0, 0, stage.width, 0);
+                        gradient.addColorStop("0", "#ffcbdb");
+                        gradient.addColorStop("0.5", "#ff6f9c");
+                        gradient.addColorStop("1.0", "#ff266a");
+                        ctx.fillStyle = gradient;
+
+                        ctx.font = "35px Arial";
+                        ctx.textAlign = "center";
+
+                        ctx.fillText("LAILA EU TE AMO <3 TU GANHOU", 300, 140);
+                        ctx.fillText("YOU ARE MY ONLY EXCEPTION", 300, 260);
+                        ctx.font = "33px Arial";
+                        ctx.fillText("THE BEST PLAYER IS YOU MY LOVE!", 300, 460);
+                        music.play();
+                   
+                } else {
+                
                 if (isOver == true) {
                     switch (event.keyCode) {
                         case 32:
@@ -513,14 +556,20 @@
                             }
 
                             break;
+
+
+
                         default:
 
                             break;
                     }
+                
+                }
                 }
 
 
             }
+        
 
             function gameovers() {
 
